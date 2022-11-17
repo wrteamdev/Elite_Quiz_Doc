@@ -93,7 +93,8 @@
                                 <li class="nav-item"><a class="nav-link" href="#howToConfigureForceUpdate">How to configure force update</a></li>         
                                 <li class="nav-item"><a class="nav-link" href="#manageBadges">Manage badges</a></li>         
                                 <li class="nav-item"><a class="nav-link" href="#howToSetupExamModule">How to set up exam module</a></li>         
-                                <li class="nav-item"><a class="nav-link" href="#howToSetupEarningModule">How to set up earning module</a></li>         
+                                <li class="nav-item"><a class="nav-link" href="#howToSetupEarningModule">How to set up earning module</a></li> 
+                                <li class="nav-item"><a class="nav-link" href="#howToSetupTimer">How to set up All Timers And Score</a></li>         
                                 <li class="nav-item"><a class="nav-link" href="#howToAppConstants">How to change application constants</a></li>
                                 <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseVersion">How to generate release version</a></li>         
                             </ul>
@@ -349,7 +350,9 @@
                                     <li>Set up facebook auth for android
                                         <br> <br>
                                         Go to android/app/src/main/res/values/strings.xml and add your app id as shown in image
-                                        <img src="images/app/addFbAuth2.jpg" alt="Elite Quiz" />
+                                        <br>
+                                        Facebook Client Token :- Facebook Developer Console -> Advance Setting you will get it facebook client token
+                                        <img src="images/app/addFbAuth2C.png" alt="Elite Quiz" />
 
                                         <br><br>
                                         Go to facebook developer console, Add android app and convert your sha-1 key to hash using http://tomeko.net/online_tools/hex_to_base64.php. and add hash key into key Hashes section.
@@ -376,8 +379,8 @@
                                         <img src="images/app/addFbAuth4.png" alt="Elite Quiz" />
 
                                         <br> <br>
-                                        Go to ios/Runner/Info.plist and add facebook app id as shown in image
-                                        <img src="images/app/addFbAuth5.png" alt="Elite Quiz" />
+                                        Go to ios/Runner/Info.plist and add facebook app id and Client Token as shown in image
+                                        <img src="images/app/addFbAuth56.png" alt="Elite Quiz" />
                                     </li>
 
 
@@ -793,6 +796,23 @@
                             </section>
 
                             
+                            <section id="howToSetupTimer">
+                                <h4>How to set up All Timers And Score</h4>
+                                <ol>    
+                                    <li>
+                                        Go to admin panel in settings -> System Utilities and you can give All Quiz types Timer per Question.
+
+                                        <br>
+
+                                        <img src="images/app/adminTimer.png" alt="Elite Quiz" />
+                                    </li> 
+
+                                  
+                                    
+                                </ol>
+                                <hr> 
+                            </section>
+
                             <section id="howToSetupEarningModule">
                                 <h4>How to setup earning module</h4>
                                 <ol>    
@@ -840,8 +860,6 @@
 
 
 
-
-
                             <section id="howToAppConstants">
                                 <h4>How to change application constants</h4>
                                 <ol>    
@@ -869,8 +887,6 @@
                                         Go To > General > Pricing and Availability > Availability > Edit All Countries or Regions Selected & unmark China Mainland there as highlighted in attached Screenshot.
                                         <img src="images/app/appAvailability.png" alt="Elite Quiz" />
                                     </li>
-                                        
-                                
                                 </ol>
                                 <hr> 
                             </section>
