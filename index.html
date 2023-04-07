@@ -1,949 +1,1070 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
-        <link href="images/favicon.png" rel="icon" />
-        <title>Documentation | Elite Quiz</title>
 
-        <!-- Bootstrap -->
-        <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"/>
-        <!-- Custom Stylesheet -->
-        <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
-    </head>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, shrink-to-fit=no">
+    <link href="images/favicon.png" rel="icon" />
+    <title>Documentation | Elite Quiz</title>
 
-    <body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap/css/bootstrap.min.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" />
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" type="text/css" href="assets/css/stylesheet.css" />
+</head>
 
-        <!-- Preloader -->
-        <div class="preloader">
-            <div class="lds-ellipsis">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
+<body data-spy="scroll" data-target=".idocs-navigation" data-offset="125">
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
-        <!-- Preloader End --> 
+    </div>
+    <!-- Preloader End -->
 
-        <!-- Document Wrapper   
+    <!-- Document Wrapper   
         =============================== -->
-        <div id="main-wrapper"> 
+    <div id="main-wrapper">
 
-            <!-- Header
+        <!-- Header
             ============================ -->
-            <header id="header" class="sticky-top"> 
-                <!-- Navbar -->
-                <nav class="primary-menu navbar navbar-expand-lg bg-dark navbar-dropdown-dark">
-                    <div class="container-fluid">
-                        <!-- Sidebar Toggler -->
-                        <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none" type="button"><span></span><span class="w-75"></span><span></span></button>
-                        <!-- Logo --> 
-                        <img src="images/logo.png" width="200" alt="logo"/>
-                        <!-- Logo End -->
-                    </div>
-                </nav>
-                <!-- Navbar End --> 
-            </header>
-            <!-- Header End --> 
+        <header id="header" class="sticky-top">
+            <!-- Navbar -->
+            <nav class="primary-menu navbar navbar-expand-lg bg-dark navbar-dropdown-dark">
+                <div class="container-fluid">
+                    <!-- Sidebar Toggler -->
+                    <button id="sidebarCollapse" class="navbar-toggler d-block d-md-none"
+                        type="button"><span></span><span class="w-75"></span><span></span></button>
+                    <!-- Logo -->
+                    <img src="images/logo.png" width="200" alt="logo" />
+                    <!-- Logo End -->
+                </div>
+            </nav>
+            <!-- Navbar End -->
+        </header>
+        <!-- Header End -->
 
-            <!-- Content
+        <!-- Content
             ============================ -->
-            <div id="content" role="main">
+        <div id="content" role="main">
 
-                <!-- Sidebar Navigation
+            <!-- Sidebar Navigation
                 ============================ -->
-                <div class="idocs-navigation bg-dark docs-navigation-dark">
-                    <ul class="nav flex-column">
-                        <li class="nav-item"><a href="#introduction" class="nav-link active">Introduction</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="#admin_panel">Elite Quiz Admin Panel</a>
-                            <ul class="nav flex-column">
-                                <li class="nav-item"><a class="nav-link" href="#installation">Configure on your server</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#notification-management">Notification Management</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#system-configurations">Set System Configurations</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#pp">Set Privacy Policy</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#tc">Set Terms Conditions</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#about_us">Set About Us</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#instructions">Set Instructions</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="#quiz_app" class="nav-link">Elite Quiz App</a>
-                            <ul class="nav flex-column">
-                                <li class="nav-item"><a class="nav-link" href="#howToSetupFlutter">How to setup flutter</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToRunFlutterProject">How to run flutter project</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangePackageName">How to change package name</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToIntegrateFirebase">How to integrate firebase</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToEnableFirebaseAuth">How to enable firebase auth</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToEnableCloudFirestore">How to enable cloud firestore</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppName">How to change application name</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppVersion">How to change application version</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeDatabaseUrl">How to change database url and other backend settings</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToConfigureAds">How to configure ads</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToSetDefaultLanguage">How to set default language</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToAddLanguage">How to add new language</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppColors">How to change application colors</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeAppFont">How to change application font</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeIntroSlideImages">How to change intro slider images</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeDefaultProfileImages">How to change default profile images</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToChangeJsonAnimations">How to change json animations</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToConfigureInAppPurchase">How to configure in-app purchase</a></li>         
-                                <li class="nav-item"><a class="nav-link" href="#howToEnableMessageInBattle">How to enable message feature in battle</a></li>         
-                                <li class="nav-item"><a class="nav-link" href="#howToConfigureForceUpdate">How to configure force update</a></li>         
-                                <li class="nav-item"><a class="nav-link" href="#manageBadges">Manage badges</a></li>         
-                                <li class="nav-item"><a class="nav-link" href="#howToSetupExamModule">How to set up exam module</a></li>         
-                                <li class="nav-item"><a class="nav-link" href="#howToSetupEarningModule">How to set up earning module</a></li> 
-                                <li class="nav-item"><a class="nav-link" href="#howToSetupTimer">How to set up All Timers And Score</a></li>         
-                                <li class="nav-item"><a class="nav-link" href="#howToAppConstants">How to change application constants</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseVersion">How to generate release version</a></li>         
-                            </ul>
-                        </li>
-                        <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
-                        <li class="nav-item"><a href="#rating" class="nav-link">Your Feedback</a></li>
-                        <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>                      
-                    </ul>
-                </div>
-
-
-                <!-- Docs Content  -->
-                <div class="idocs-content">
-                    <div class="container"> 
-
-                        <!-- Getting Started -->
-                        <section id="introduction">
-                            <h3>Introduction</h3>
-                            <p class="">Thank you for purchasing code. It really means a lot and It's our pleasure to serve top-notch service to you. Thank you so much for choosing<a href="https://wrteam.in/" style='color:#3c55d1' target="_blank"> WRTeam </a>. If you have trouble with the code and documentation please contact to our Support Team <a href="#support" style="color:#3c55d1">Here</a></p>
-                        </section>
-                        <hr class="divider">    
-
-                        <section id="admin_panel">
-                            <h3>Elite Quiz Admin Panel</h3>
-                            
-                            <section id="installation">
-                                <h4>How to Install Elite Online on Your shared hosting?</h4>
-                                <ol>
-                                    <li>Create your domain or subdomain in your shared hosting</li>
-                                    <li>Create an empty database in your shared hosting and remember this credentials:
-                                        <br/><span>i. database name</span>
-                                        <br/><span>ii. database username</span>
-                                        <br/><span>iii. database password</span>                                
-                                    </li>
-                                    <li>Upload the source code you have downloaded from CodeCanyon and unzip it.</li>
-                                    <li>Now navigate to the url where your project is located.<br/>
-                                        ex. mydomain.com or subdomain.mydomain.com
-                                    </li>
-                                    <li>The installation screen should appear and guide you in the process.</li>
-                                </ol>
-                                <p>Thats it! Now you are ready to run your first Elite Online : <b>https://elitequiz.wrteam.in</b></p>
-                                <b>Default Login Details</b><br>
-                                User: admin<br>
-                                Pass: admin123<br><br>
-                                <hr> 
-                            </section>
-
-                            <section id="notification-management">
-                                <h4>Notification Management</h4>
-                                <p>First Of all,we need to set the FCM server key from <a href="https://console.firebase.google.com" target="_blank">Firebase console</a></p>
-                                <img src="images/panel/notification-setting.png"/>
-                                <hr>  
-                            </section>
-
-                            <section id="system-configurations">
-                                <h4>Set System Configurations</h4>
-                                <p>Set Configurations for you app. All the changes are maded here will directly reflect in the App</p>
-                                <p>Change Quiz name , JWT KET and logo form Profie menu</p>
-                                <img src="images/panel/profile.png" alt='System Configurations' title='System Configurations'>
-
-                                <p>From here you can set System & App Timezone, App Play store or market place Link, Enable / Disable Answer Display, Language Mode, Option E Mode, Force Update App, Daily Quiz Mode, Contest Mode, Battle Random Category Mode, Battle Group Category Mode & In App Purchase. Manage App Version and Update Shareapp Text. Set fix Question in level</p>
-                                <img src="images/panel/system-configurations.png" alt='System Configurations' title='System Configurations'>
-                                <hr> 
-                            </section>
-
-                            <section  id="pp">
-                                <h4>Set Privacy Policy</h4>
-                                <p>Set Privacy Policy for your website and app.</p>
-                                <img src="images/panel/pp.png"/>
-                                <hr> 
-                            </section>
-
-                            <section  id="tc">
-                                <h4>Set Terms Conditions</h4>
-                                <p>Set Terms Conditions for your website and app.</p>
-                                <img src="images/panel/tc.png"/>					
-                                <hr>  
-                            </section>
-
-                            <section id="about_us">
-                                <h4>About Us Content</h4>
-                                <p>Set and manage your about us content for app.</p>
-                                <img src="images/panel/about-us.png"/>					
-                                <hr>
-                            </section>
-
-                            <section id="instructions">
-                                <h4>How to Play Content</h4>
-                                <p>Set and manage your how to play content for app.</p>
-                                <img src="images/panel/instructions.png"/>					
-                                <hr> 
-                            </section>
-
-                        </section>
-                        <hr class="divider">  
-
-                        <section id="quiz_app">
-                            <h3>Elite Quiz App</h3>
-
-                            <section id="howToSetupFlutter">
-                                <h4 >How to setup Flutter</h4>
-                                <ol>
-                                    Visit flutter official website : <a href="https://docs.flutter.dev/get-started/install">https://docs.flutter.dev/get-started/install</a>
-                                    
-                                     for full install guide.
-                                     <br>
-                                     <br>
-                                     If you prefer video tutorials, we recommend this playlist for the full installation process <br>
-                                     <a href="https://www.youtube.com/playlist?list=PLSzsOkUDsvdtl3Pw48-R8lcK2oYkk40cm">https://www.youtube.com/playlist?list=PLSzsOkUDsvdtl3Pw48-R8lcK2oYkk40cm</a>
-                                </ol>
-                                <hr> 
-                            </section>
-
-                           
-
-                            <section id="howToRunFlutterProject">
-                                <h4>How to run this project</h4>
-                                <ol>
-                                    <li>
-                                        Unzip the downloaded code. After unzipping you will have Elite Quiz - Flutter Code zip folder.
-                                        <br> Unzip Elite Quiz - Flutter Code folder and open it in
-                                          Android Studio or Visual Studio Code.</li>
-                                    <li>
-                                        Open ide teminal and execute flutter pub get command.
-                                    </li>
-                                    <li>
-                                        If you are running this app for ios then run these following commands in terminal.
-                                        <br>cd ios
-                                        <br> pod install
-                                        <br> cd ..
-                                    </li>
-                                    <li>
-                                        open terminal and execute flutter run
-                                    </li>
-                                </ol>					
-                                <hr> 
-                            </section>
-
-
-                            
-
-
-                            <section id="howToChangePackageName">
-                                <h4>How to change package name</h4>
-                                <ol>
-                                    <li>
-                                        Change package name for android app <br>
-                                        Execute this command in your terminal<br> flutter pub run change_app_package_name:main your_new_package_name
-                                        <img src="images/app/changePackageName.png" alt="Elite Quiz">
-                                    </li>
-                                    <li>
-                                        Change package name for ios app <br>
- 
-                                        Open ios folder of this project in xcode. Go Select Runner->Targets->General->Identity and enter new package name in Build Identifier.
-                                        <br>
-                                        <img src="images/app/changePackageName1.png" alt="Elite Quiz">
-                                    </li>
-                                    <li>
-                                        Go to lib/utils/constants.dart and update package.
-                                        <img src="images/app/changePackageName2.png" alt="Elite Quiz">
-                                    </li>
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section  id="howToIntegrateFirebase">
-                                <h4>How to integrate firebase</h4>
-                                <ol>
-                                    <li>Create firebase project in your account
-                                        <img src="images/app/createFirebase1.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/createFirebase2.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/createFirebase3.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/createFirebase4.jpg" alt="Elite Quiz" /><br>
-                                    </li>
-                                    <li>Add andorid application to your firebase project
-                                        <img src="images/app/addAndroid.jpg" alt="Elite Quiz" />
-                                    </li>
-                                    <li>Visit https://developers.google.com/android/guides/client-auth to know how to get sha-1 and sha-256 key
-                                        <img src="images/app/addAndroid2.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/addAndroid3.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/addAndroid4.jpg" alt="Elite Quiz" /><br>
-                                    </li>
-                                    <li>You have connected andorid application to your firebase project successfully</li>
-                                    <li>Add ios application to your firebase project 
-                                        <img src="images/app/addIos.jpg" alt="Elite Quiz" />
-                                    </li>
-                                    <li>Get your bundle id here [your-flutter-project-dir]\ios\Runner.xcodeproj\project.pbxproj or search for
-                                        PRODUCT_BUNDLE_IDENTIFIER and you will get following result 
-                                        <img src="images/app/addIos3.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/addIos2.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/addIos4.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/addIos5.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/addIos6.jpg" alt="Elite Quiz" />
-                                    </li>
-                                    <li>You have connected ios application to your firebase project successfully</li>
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section  id="howToEnableFirebaseAuth">
-                                <h4>How to enable firebase auth</h4>
-                                <ol>
-                                    <li>Go to firebase project.Click on authentication menu and goto sign-in method. Enable all the authentication method mention in below image
-                                        <img src="images/app/addFirebaseAuth.jpg" alt="Elite Quiz" />
-                                    
-                                    </li>
-                                    <li>If your are using google sign-in you need to enable OAuth APIs that you want to use using
-                                        https://console.developers.google.com/ .Enable people api and make sure you've filled out all required fields in the console for OAuth consent screen.
-                                        Otherwise, you may encounter APIException errors.
-                                    </li>
-
-                                    <li> Please add sha-256 key as shown in below image. Go to project settings -> your apps -> android apps
-                                         
-                                        <img src="images/app/auth-1.png" alt="Elite Quiz" />
-                                    </li>
-
-                                    <li> Please add support email as shown in below image. Go to project settings -> general -> public settings 
-
-                                         
-                                        <img src="images/app/auth-2.png" alt="Elite Quiz" />
-                                    </li>
-
-                                    <li> Please add support email as shown in below image. Go to project settings -> general -> public settings 
-
-                                         
-                                        <img src="images/app/auth-2.png" alt="Elite Quiz" />
-                                    </li>
-
-                                    <li>
-                                        If you are using phone auth in ios then follow these steps
-
-                                        <br>
-                                        Go to ios/Runner/GoogleService-Info.plist and copy REVERSED_CLIENT_ID 
-                                        <img src="images/app/addPhoneAuth.png" alt="Elite Quiz" />
-                                        <br>
-                                        Paste in ios/Runner/Info.plist as shown in below image
-                                        <img src="images/app/addPhoneAuth2.png" alt="Elite Quiz" />
-
-                                    </li>
-
-
-
-
-                                    <li>If your are using facebook login go to https://developers.facebook.com/ and create project and get your application id and applicaiton secret from there.
-                                        <img src="images/app/addFbAuth.jpg" alt="Elite Quiz" />
-                                    </li>
-
-
-
-
-                                    <li>Set up facebook auth for android
-                                        <br> <br>
-                                        Go to android/app/src/main/res/values/strings.xml and add your app id as shown in image
-                                        <br>
-                                        Facebook Client Token :- Facebook Developer Console -> Advance Setting you will get it facebook client token
-                                        <img src="images/app/addFbAuth2C.png" alt="Elite Quiz" />
-
-                                        <br><br>
-                                        Go to facebook developer console, Add android app and convert your sha-1 key to hash using http://tomeko.net/online_tools/hex_to_base64.php. and add hash key into key Hashes section.
-                                        <br><br>
-
-
-                                        Enter your package name in Package Names section. 
-
-                                        <br><br>
-
-                                        Enter [your_package_name.main.dart] in Class Name section. 
-                                        <br>
-                                        <img src="images/app/addFbAuth3.png" alt="Elite Quiz" />
-
-                                    </li>
-
-                                    <li>
-                                        Set up facebook auth for ios
-
-                                        <br> <br>
-                                        
-                                        Go to facebook developer, Add ios app and add your bundle id as shown in image
-                                        
-                                        <img src="images/app/addFbAuth4.png" alt="Elite Quiz" />
-
-                                        <br> <br>
-                                        Go to ios/Runner/Info.plist and add facebook app id and Client Token as shown in image
-                                        <img src="images/app/addFbAuth56.png" alt="Elite Quiz" />
-                                    </li>
-
-
-
-
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToEnableCloudFirestore">
-                                <h4>How to enable cloud firestore</h4>
-                                <ol>
-                                    <li>Follow this steps in order to add cloud firestore    
-                                        <img src="images/app/addFirestore.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/addFirestore2.jpg" alt="Elite Quiz" /><br>
-                                        <img src="images/app/addFirestore3.jpg" alt="Elite Quiz" />
-                                    </li>
-
-                                    <li>Change security rules of cloud firestore in order to make your app more secure
-                                        <img src="images/app/addFirestore4.jpg" alt="Elite Quiz" />
-                                    </li>                            
-                                </ol>
-                                <hr> 
-                            </section>
-
-                            <section  id="howToChangeAppName">
-                                <h4>How to change application name</h4>
-                                <ol>
-                                    <li>Change application name for your android application. Go to android/app/src/main/AndroidManifest.xml and change name
-                                        <img src="images/app/appName2.jpg" alt="Elite Quiz" />
-                                    </li> 
-                                    <li>Change application name for your ios application. Go to ios/Runner/Info.plist and change name
-                                        <img src="images/app/appName3.jpg" alt="Elite Quiz" />
-                                    </li>                                    
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToChangeAppVersion">
-                                <h4>How to change application version and app launcher icon</h4>
-                                <ol>
-                                    <li>
-                                        go to pubspec.yaml EX.Update version:A.B.C+X in pubspec.yaml.
-                                    </li>   
-                                    <li>Do not forget to execute flutter packages get, flutter build or flutter run after this step</li>   
-                                </ol>
-                                <img src="images/app/changeAppVersion.jpg" alt="Elite Quiz" />
-                                <hr> 
-                            </section>
-
-                            <section id="howToChangeAppLogo">
-                                <h4>How to change application logo</h4>
-                                <ol>
-                                    <li>For Android For Android, open android > app > src > main > res and add here your logo according to device screen size                
-                                        <img src="images/app/androidAppIcon.png" alt="Elite Quiz" />  
-                                    </li> 
-                                    <li>For IOS  open ios > Runner > Assets.xcassets > AppIcon.appiconset here and add your logo according to diffrent size.
-                                        <img src="images/app/iosAppIcon.png" alt="Elite Quiz" />
-                                    </li> 
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToChangeDatabaseUrl">
-                                <h4>How to change database url and other backend settings</h4>
-                                <ol>
-                                    <li>
-                                        Go to lib/utils/constants.dart and make changes shown in below image
-                                        <img src="images/app/changeBaseUrlAndApiParameters.jpg" alt="Elite Quiz" />
-                                    </li>   
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToConfigureAds">
-                                <h4>How to configure google ads</h4>
-                                <ol>
-                                   <li>
-                                        Enable ads from admin panel as show in below image.
-                                        <br>
-                                        If you do not want to add ads in app then skip the further steps
-                                        
-                                        
-                                        <img src="images/app/enable-ads.png" alt="Elite Quiz" />
-
-                                    </li>
-                                    <li>
-                                        Set up google ads<br>
-                                        Go to android/app/src/main/AndroidManifest.xml and enter android app id as shown in below image 
-                                       <br>
-                                        Find app id of your app as mention here  
-                                        https://support.google.com/admob/answer/7356431?hl=en   
-
-                                        <img src="images/app/google-ads-1.png" alt="Elite Quiz" />
-                                        </li>
-
-                                        <li>
-                                            Go to ios/Runner/Info.plist and enter ios app id as shown in below image 
-                                           <br>
-                                            Find app id of your app as mention here  
-                                            https://support.google.com/admob/answer/7356431?hl=en   
-    
-                                            <img src="images/app/google-ads-2.png" alt="Elite Quiz" />
-                                            </li>    
-                                    
-                                    <li>
-                                        Go to settings/Ads.Settings in admin panel and add google ads id as shown in below image
-                                        <img src="images/app/add-googe-ad-ids.png" alt="Elite Quiz" />
-                                    </li>
-                                    
-                                    <li>
-                                        Go to settings/Ads.Settings in admin panel and add facebook ads placement id as shown in below image.
-                                        Facebook rewarded ad is not supported for ios as of now. We will sure add support for it in future.
-                                        <img src="images/app/add-fb-ad-ids.png" alt="Elite Quiz" />
-                                    </li>
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToSetDefaultLanguage">
-                                <h4>How to set default language</h4>
-                                <ol>
-                                    <li>
-                                        By default,default applicaiton language is english. If you want to change default language
-                                        go to lib/utils/constants.dart and add your respective language's code shown in below image.
-                                        Get your language code from here https://developers.google.com/admin-sdk/directory/v1/languages.
-                                        Make sure your language code is avaialble in https://developers.google.com/admin-sdk/directory/v1/languages.
-                                        <img src="images/app/changeDefaultLanguage.jpg" alt="Elite Quiz" />
-                                    </li> 
-                                    <li>
-                                        If your default language code is not in supported language list add language code 
-                                        in list as shown in below image. Go to lib/utils/constants.dart
-                                        <img src="images/app/addDefaultLanguage.jpg" alt="Elite Quiz" />
-                                    </li>
-                                    <li>
-                                        If your default language is not in assets/languages/[language-code].json then create new file
-                                        in same folder with [language-code].json. Add all the labels from en.json and 
-                                        convert label values in your respective language
-                                        <img src="images/app/addNewLanguage.jpg" alt="Elite Quiz" />
-                                    </li>
-                                    <li>
-                                        copy all the labels form en.json file in your [language-code].json file.
-                                        <img src="images/app/addNewLanguage2.jpg" alt="Elite Quiz" />
-                                    </li>
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section  id="howToAddLanguage">
-                                <h4>How to add new language</h4>
-                                <ol>
-                                    <li>
-                                        Go to your admin panel and enable language mode as shown in below image
-                                        <img src="images/app/admin-language-1.png" alt="Elite Quiz" />
-                                    </li>
-                                    <li>
-                                        Go to your admin panel and add new language as shown in below image
-                                        <img src="images/app/admin-language-2.png" alt="Elite Quiz" />
-                                    </li>     
-                                    <li>
-                                        Add newly added language code in list as shown in below image. Go to lib/utils/constants.dart.
-                                        Get your language code from here https://developers.google.com/admin-sdk/directory/v1/languages.
-                                        Make sure your language code is avaialble in https://developers.google.com/admin-sdk/directory/v1/languages.
-                                        <img src="images/app/addDefaultLanguage.jpg" alt="Elite Quiz" />
-                                    </li> 
-                                    <li>
-                                        Create new file
-                                        in assets/languages/ with [language-code].json. Add all the labels from en.json and 
-                                        convert label values in your respective language
-                                        <img src="images/app/addNewLanguage.jpg" alt="Elite Quiz" />
-                                    </li>
-                                    <li>
-                                        copy all the labels form en.json file in your [language-code].json file.
-                                        <img src="images/app/addNewLanguage2.jpg" alt="Elite Quiz" />
-                                    </li>                                    
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToChangeAppColors">
-                                <h4>How to change application colors</h4>
-                                <ol>    
-                                    <li>
-                                        Add your colors in lib/ui/styles/colors.dart and do not change the color variables name
-                                        <img src="images/app/changeColors.png" alt="Elite Quiz" />
-                                    </li>   
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToChangeAppFont">
-                                <h4>How to change application font</h4>
-                                <ol>    
-                                    <li>
-                                        Go to lib/app/app.dart and add your font as shown in image
-                                        <img src="images/app/changeFont.jpg" alt="Elite Quiz" />
-                                    </li>
-                                    <li>
-                                        Go to assets/google_fonts/ and add .tff files of fonts.
-                                        <img src="images/app/changeFont2.jpg" alt="Elite Quiz" />
-                                    </li>  
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToChangeIntroSlideImages">
-                                <h4>How to change intro slider images</h4>
-                                <ol>    
-                                    <li>
-                                        Go to assets > images folder and add your intro slide images.It is recommended to follow same naming convention shown in below image
-                                        <img src="images/app/introSlider.jpg" alt="Elite Quiz" />
-                                    </li> 
-                                    <li>
-                                        Go to assets > files > introSliderImages.json file and add intro slider image's name in this this file as shown in below image
-                                        <img src="images/app/introSlider2.jpg" alt="Elite Quiz" />
-                                    </li>  
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section  id="howToChangeDefaultProfileImages">
-                                <h4>How to change default profile images</h4>
-                                <ol>    
-                                    <li>
-                                        Go to assets > images > profile folder and add your default profile images.It is recommended to follow same naming convention shown in below image
-                                        <img src="images/app/profilePictures.jpg" alt="Elite Quiz" />
-                                    </li>  
-                                    <li>
-                                        Go to assets > files > defaultProfileImages.json file and add default profile image's name in this this file as shown in below image
-                                        <img src="images/app/profilePictures2.jpg" alt="Elite Quiz" />
-                                    </li>   
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section id="howToChangeJsonAnimations">
-                                <h4>How to change json animations</h4>
-                                <ol>    
-                                    <li>
-                                        Go to assets > animations folder and add json animaiton files. Make sure to use same name shown in below image
-                                        <img src="images/app/changeJsonAnimations.jpg" alt="Elite Quiz" />
-                                    </li>   
-                                </ol>
-                                <hr> 
-                            </section>
-
-                            <section id="howToConfigureInAppPurchase">
-                                <h4>How to configure in-app purchase</h4>
-                                <ol>    
-                                    <li>Configure in-app purchase for android applicaiton.
-                                        Upload your application in playstore and create in-app products for your applicaiton as shown in below image.
-                                        Id of in-app products (consumable product) in apple and play store must be same. 
-                                        <img src="images/app/in-app-purchase-1.png" alt="Elite Quiz" />
-                                    </li>  
-                                    <li>Configure in-app purchase for ios applicaiton.
-                                        Add capibility in your project using xcode as show in below image.
-
-                                        <img src="images/app/in-app-purchase-2.png" alt="Elite Quiz" />
-                                        <br><br>
-                                        Follow this links in order to enable in-purchase.<br>
-                                        https://help.apple.com/app-store-connect/#/devae49fb316.<br>
-                                         https://help.apple.com/app-store-connect/#/devb57be10e7.
-                                         <br>
-                                        For more help visit this https://developer.apple.com/in-app-purchase/. 
-                                        <br>
-                                        Id of in-app products (consumable product) in apple and play store must be same. 
-
-                                    </li>
-                                    <li>
-                                        Go to lib/utils/inAppPurchaseProducts.dart. 
-                                        Enter coins and in-app product's id (created previously) respective to coin as shown in image.
-                                        <img src="images/app/in-app-purchase-3.png" alt="Elite Quiz" />
-                                    </li>  
-
-                                </ol>
-                                <hr> 
-                            </section>
-                                     
-                            
-                            <section id="howToEnableMessageInBattle">
-                                <h4>How to enable message feature in battle</h4>
-                                <ol>    
-                                    <li>
-                                        Go to firebase project, firestore database -> indexes and create composite query index as shown in below images.
-                                        <br>
-                                        <img src="images/app/battle-message-1.png" alt="Elite Quiz" />
-                                        <img src="images/app/battle-message-2.png" alt="Elite Quiz" />
-                                        <img src="images/app/battle-message-3.png" alt="Elite Quiz" />
-                                    </li> 
-                                    <li>
-                                        Go to lib/utils/constants.dart and add predefined messages as per your desire.
-
-                                        <br>
-                                        <img src="images/app/battle-message-4.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                    <li>
-                                        If you want to update emojis then follow these steps.
-                                        Go to assets/images/emojis/ and add new emoji.
-                                        File format of emoji must be svg.
-                                        
-                                        <img src="images/app/battle-message-5.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                    <li>
-                                        Add file name of newly added emoji in assets/files/emojis.json file.
-                                        <img src="images/app/battle-message-6.png" alt="Elite Quiz" />
-                                    </li> 
-                                    
-                                </ol>
-                                <hr> 
-                            </section>
-
-                            
-                            
-                            <section id="howToConfigureForceUpdate">
-                                <h4>How to configure force update</h4>
-                                <ol>    
-                                    <li>
-                                        Go to admin panel in settings -> system configurations and enable force update as shown in image.
-                                        <br>
-                                        <img src="images/app/force-update.png" alt="Elite Quiz" />
-                                    </li> 
-                                    <li>
-                                        Go to pubspec.yaml and copy the version number of application. 
-                                        
-
-                                        <br>
-                                        <img src="images/app/force-update-2.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                    <li>
-                                        Go to admin panel in settings -> system configurations and enter the version number we just copied.
-                                        
-
-                                        <br>
-                                        <img src="images/app/force-update-3.png" alt="Elite Quiz" />
-                                    </li> 
-                                    <li>
-                                        Go to admin panel in settings -> system configurations and add application url(play and app store link).
-                                        Make sure to add correct url otherwise force update will not work as expected.
-                                        
-
-                                        <br>
-                                        <img src="images/app/force-update-4.png" alt="Elite Quiz" />
-                                    </li> 
-                                    
-                                </ol>
-                                <hr> 
-                            </section>
-
-                            <section id="manageBadges">
-                                <h4>Manage Badges</h4>
-                                <ol>    
-                                    <li>
-                                        Manage badges from here
-                                        <img src="images/app/manage-badges.png" alt="Elite Quiz" />
-                                    </li> 
-                                     
-                                    <li>
-                                        To unlock badges like Super Sonic, Flashback and Brainiac minimum question is set to 5.<br>
-                                        You can change that as shown in below image.  
-                                        <img src="images/app/manage-badges-1.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                    <li>
-                                        To unlock badges like Combat Winner, Clash Winner and Quiz Warrior winner must be declared by completing battle.<br>
-                                    </li> 
-
-                                    <li>
-                                        To get more information about how badges works click here.
-                                        <br>
-                                        <a href = "files/badges.txt">Badges Details</a> 
-                                        
-                                    </li>
-
-                                    
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            
-                            
-                            <section id="howToSetupExamModule">
-                                <h4>How to setup exam module</h4>
-                                <ol>    
-                                    <li>
-                                        Go to admin panel in settings -> system configurations and enable exam module as shown in image.
-                                        <br>
-                                        <img src="images/app/exam-module-1.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                    <li>
-                                        Go to lib/utils/constants.dart and update exam rules as per your need as shown in image.
-                                        <br>
-                                        <img src="images/app/exam-module-2.png" alt="Elite Quiz" />
-                                    </li> 
-                                    
-                                </ol>
-                                <hr> 
-                            </section>
-
-                            
-                            <section id="howToSetupTimer">
-                                <h4>How to set up All Timers And Score</h4>
-                                <ol>    
-                                    <li>
-                                        Go to admin panel in settings -> System Utilities and you can give All Quiz types Timer per Question.
-
-                                        <br>
-
-                                        <img src="images/app/adminTimer.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                  
-                                    
-                                </ol>
-                                <hr> 
-                            </section>
-
-                            <section id="howToSetupEarningModule">
-                                <h4>How to setup earning module</h4>
-                                <ol>    
-                                    <li>
-                                        Go to admin panel in settings -> Payment settings and enable payment as shown in image.
-
-                                        <br>
-
-                                        Per coin will decide amount of coins that will convert in amount. For Example. per 100 coins x amount will give to user.
-
-                                        <br>
-                                        Per amount will decide on x amount of coins user will get entered amount. For Example. per x coins 1 amount will give to user.
-
-                                        <br>
-                                        Note - Consider amount as dollar or any currency. It refer as real money.
-
-                                          
-
-                                        <br>
-                                        <img src="images/app/earning-module-1.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                    <li>
-                                        Go to lib/utils/constants.dart and update notes for payment request as per your need as shown in image.
-                                        <br>
-                                        <img src="images/app/earning-module-3.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                    <li>
-                                        Go to lib/utils/constants.dart and add payment method as per your need.
-                                        <br>
-                                        <img src="images/app/earning-module-2.png" alt="Elite Quiz" />
-                                    </li> 
-
-                                    <li>
-                                        Go to lib/utils/uiUtils.dart and modify coins redeem related equaiton as per your need.
-                                        <br>
-                                        <img src="images/app/earning-module-4.png" alt="Elite Quiz" />
-                                    </li> 
-                                    
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-
-
-                            <section id="howToAppConstants">
-                                <h4>How to change application constants</h4>
-                                <ol>    
-                                    <li>
-                                        If you want to change question duration or other constants as shown in image
-                                        Go to lib/utils/constants.dart and update values
-                                        <img src="images/app/changeOtherConstants.jpg" alt="Elite Quiz" />
-                                        <img src="images/app/changeOtherConstants2.jpg" alt="Elite Quiz" />
-                                    </li> 
-                                    <li>If you want to modify coins distribution equation go to lib/utils/uiUtils.dart and updated equaiton as show in below image
-                                        <img src="images/app/coinsEquation.png" alt="Elite Quiz" />
-                                    </li>
-                                </ol>
-                                <hr> 
-                            </section>
-
-
-                            <section  id="howToGenerateReleaseVersion">
-                                <h4>How to generate release version of this product</h4>
-                                <ol>    
-                                    <li>To generate release android app-bundle and publish to playstore follow https://flutter.dev/docs/deployment/android</li>            
-                                    <li>To generate release ios apk and publish to appstore follow https://flutter.dev/docs/deployment/ios</li>
-                                    <li>Before delpoying ios apk to app store make sure you configured below setting
-                                        <br>
-                                        Go To > General > Pricing and Availability > Availability > Edit All Countries or Regions Selected & unmark China Mainland there as highlighted in attached Screenshot.
-                                        <img src="images/app/appAvailability.png" alt="Elite Quiz" />
-                                    </li>
-                                </ol>
-                                <hr> 
-                            </section>
-
-                        </section>
-                        <hr class="divider">  
-
-                        <section id="support">
-                            <h3>Support</h3>
-                            <p>Its our pleasure to serve our service and support. please contact our support team.</p>
-                            <p>Head of Customer Support : Priyansh Parmar <a href="https://join.skype.com/invite/E228Z6F4s3gB" target="_blank" style="color:#3c55d1">Skype Name : Priyansh Parmar</a></p>
-                            <p>To help our customers, we constantly be in touch with every customer if they need any assistance regarding our product. 
-                                We offer our customers a support from  <strong> Mon – Fri 9.00am to 6.00pm IST (GMT +5.30) – We are a Team located in India – Asia.</strong></p>
-                            <p>Typically we reply our customers for all the questions and queries within 24 hours of time via comments, support forum or emails.</p>
-                        </section>
-                        <hr class="divider">  
-
-                        <section id="rating">
-                            <h3>Your Feedback</h3>
-                            <p>Dear valuable customer,
-                                Thank you very much for choosing our product.
-                                It's our pleasure to serve top-notch service to you.
-                                Please give us your honest feedback that will help us to make a more strong and reliable product by click here <a href="https://codecanyon.net/item/elite-quiz-the-flutter-quiz-app/33570423" style="color:#3c55d1" target="_blank">Rate Us</a>.
-                                Thank you very much.</p>
-                        </section>
-                        <hr class="divider">  
-
-                        <section id="contactus">
-                            <h3>Contact Us</h3>
-                            <p>WRTeam has creative and dedicated group of developers who are mastered in Apps Developments and Web Application Development with a niche in delivering quality solutions to customers across the globe.
-                                Contact us today to find out how we can help you or for freelance work.
-                            </p><p>Visit Us : <a href="https://wrteam.in/" target="_blank">https://wrteam.in</a>
-                            </p><p>Mail Us : support@wrteam.in</p>
-                            <p>Thank you very much.</p>
-                        </section>
-                        <hr class="divider">  
-
-                    </div>
-                </div>
-
+            <div class="idocs-navigation bg-dark docs-navigation-dark">
+                <ul class="nav flex-column">
+                    <li class="nav-item"><a href="#introduction" class="nav-link active">Introduction</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#admin_panel">Elite Quiz Admin Panel</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#installation">Configure on your server</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#notification-management">Notification
+                                    Management</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#system-configurations">Set System
+                                    Configurations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#pp">Set Privacy Policy</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#tc">Set Terms Conditions</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#about_us">Set About Us</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#instructions">Set Instructions</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#quiz_app" class="nav-link">Elite Quiz App</a>
+                        <ul class="nav flex-column">
+                            <li class="nav-item"><a class="nav-link" href="#howToSetupFlutter">How to setup flutter</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#howToRunFlutterProject">How to run flutter
+                                    project</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangePackageName">How to change
+                                    package name</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToIntegrateFirebase">How to integrate
+                                    firebase</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToEnableFirebaseAuth">How to enable
+                                    firebase auth</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToEnableCloudFirestore">How to enable
+                                    cloud firestore</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangeAppName">How to change
+                                    application name</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangeAppVersion">How to change
+                                    application version</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangeDatabaseUrl">How to change
+                                    database url and other backend settings</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToConfigureAds">How to configure ads</a>
+                            </li>
+                            <li class="nav-item"><a class="nav-link" href="#howToSetDefaultLanguage">How to set default
+                                    language</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToAddLanguage">How to add new
+                                    language</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangeAppColors">How to change
+                                    application colors</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangeAppFont">How to change
+                                    application font</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangeIntroSlideImages">How to change
+                                    intro slider images</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangeDefaultProfileImages">How to
+                                    change default profile images</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToChangeJsonAnimations">How to change
+                                    json animations</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToConfigureInAppPurchase">How to
+                                    configure in-app purchase</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToEnableMessageInBattle">How to enable
+                                    message feature in battle</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToConfigureForceUpdate">How to configure
+                                    force update</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#manageBadges">Manage badges</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToSetupExamModule">How to set up exam
+                                    module</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToSetupEarningModule">How to set up
+                                    earning module</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToSetupTimer">How to set up All Timers
+                                    And Score</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToAppConstants">How to change application
+                                    constants</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseVersion">How to generate
+                                    release version</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a href="#support" class="nav-link">Support</a></li>
+                    <li class="nav-item"><a href="#rating" class="nav-link">Your Feedback</a></li>
+                    <li class="nav-item"><a href="#contactus" class="nav-link">Contact Us</a></li>
+                </ul>
             </div>
-            <!-- Content end --> 
 
+
+            <!-- Docs Content  -->
+            <div class="idocs-content">
+                <div class="container">
+
+                    <!-- Getting Started -->
+                    <section id="introduction">
+                        <h3>Introduction</h3>
+                        <p class="">Thank you for purchasing code. It really means a lot and It's our pleasure to serve
+                            top-notch service to you. Thank you so much for choosing<a href="https://wrteam.in/"
+                                style='color:#3c55d1' target="_blank"> WRTeam </a>. If you have trouble with the code
+                            and documentation please contact to our Support Team <a href="#support"
+                                style="color:#3c55d1">Here</a></p>
+                    </section>
+                    <hr class="divider">
+
+                    <section id="admin_panel">
+                        <h3>Elite Quiz Admin Panel</h3>
+
+                        <section id="installation">
+                            <h4>How to Install Elite Online on Your shared hosting?</h4>
+                            <ol>
+                                <li>Create your domain or subdomain in your shared hosting</li>
+                                <li>Create an empty database in your shared hosting and remember this credentials:
+                                    <br /><span>i. database name</span>
+                                    <br /><span>ii. database username</span>
+                                    <br /><span>iii. database password</span>
+                                </li>
+                                <li>Upload the source code you have downloaded from CodeCanyon and unzip it.</li>
+                                <li>Now navigate to the url where your project is located.<br />
+                                    ex. mydomain.com or subdomain.mydomain.com
+                                </li>
+                                <li>The installation screen should appear and guide you in the process.</li>
+                            </ol>
+                            <p>Thats it! Now you are ready to run your first Elite Online :
+                                <b>https://elitequiz.wrteam.in</b>
+                            </p>
+                            <b>Default Login Details</b><br>
+                            User: admin<br>
+                            Pass: admin123<br><br>
+                            <hr>
+                        </section>
+
+                        <section id="notification-management">
+                            <h4>Notification Management</h4>
+                            <p>First Of all,we need to set the FCM server key from <a
+                                    href="https://console.firebase.google.com" target="_blank">Firebase console</a></p>
+                            <img src="images/panel/notification-setting.png" />
+                            <hr>
+                        </section>
+
+                        <section id="system-configurations">
+                            <h4>Set System Configurations</h4>
+                            <p>Set Configurations for you app. All the changes are maded here will directly reflect in
+                                the App</p>
+                            <p>Change Quiz name , JWT KET and logo form Profie menu</p>
+                            <img src="images/panel/profile.png" alt='System Configurations'
+                                title='System Configurations'>
+
+                            <p>From here you can set System & App Timezone, App Play store or market place Link, Enable
+                                / Disable Answer Display, Language Mode, Option E Mode, Force Update App, Daily Quiz
+                                Mode, Contest Mode, Battle Random Category Mode, Battle Group Category Mode & In App
+                                Purchase. Manage App Version and Update Shareapp Text. Set fix Question in level</p>
+                            <img src="images/panel/system-configurations.png" alt='System Configurations'
+                                title='System Configurations'>
+                            <hr>
+                        </section>
+
+                        <section id="pp">
+                            <h4>Set Privacy Policy</h4>
+                            <p>Set Privacy Policy for your website and app.</p>
+                            <img src="images/panel/pp.png" />
+                            <hr>
+                        </section>
+
+                        <section id="tc">
+                            <h4>Set Terms Conditions</h4>
+                            <p>Set Terms Conditions for your website and app.</p>
+                            <img src="images/panel/tc.png" />
+                            <hr>
+                        </section>
+
+                        <section id="about_us">
+                            <h4>About Us Content</h4>
+                            <p>Set and manage your about us content for app.</p>
+                            <img src="images/panel/about-us.png" />
+                            <hr>
+                        </section>
+
+                        <section id="instructions">
+                            <h4>How to Play Content</h4>
+                            <p>Set and manage your how to play content for app.</p>
+                            <img src="images/panel/instructions.png" />
+                            <hr>
+                        </section>
+
+                    </section>
+                    <hr class="divider">
+
+                    <section id="quiz_app">
+                        <h3>Elite Quiz App</h3>
+
+                        <section id="howToSetupFlutter">
+                            <h4>How to setup Flutter</h4>
+                            <ol>
+                                Visit flutter official website : <a
+                                    href="https://docs.flutter.dev/get-started/install">https://docs.flutter.dev/get-started/install</a>
+
+                                for full install guide.
+                                <br>
+                                <br>
+                                If you prefer video tutorials, we recommend this playlist for the full installation
+                                process <br>
+                                <a
+                                    href="https://www.youtube.com/playlist?list=PLSzsOkUDsvdtl3Pw48-R8lcK2oYkk40cm">https://www.youtube.com/playlist?list=PLSzsOkUDsvdtl3Pw48-R8lcK2oYkk40cm</a>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+
+                        <section id="howToRunFlutterProject">
+                            <h4>How to run this project</h4>
+                            <ol>
+                                <li>
+                                    Unzip the downloaded code. After unzipping you will have Elite Quiz - Flutter Code
+                                    zip folder.
+                                    <br> Unzip Elite Quiz - Flutter Code folder and open it in
+                                    Android Studio or Visual Studio Code.
+                                </li>
+                                <li>
+                                    Open ide teminal and execute flutter pub get command.
+                                </li>
+                                <li>
+                                    If you are running this app for ios then run these following commands in terminal.
+                                    <br>cd ios
+                                    <br> pod install
+                                    <br> cd ..
+                                </li>
+                                <li>
+                                    open terminal and execute flutter run
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+
+
+
+                        <section id="howToChangePackageName">
+                            <h4>How to change package name</h4>
+                            <ol>
+                                <li>
+                                    Change package name for android app <br>
+                                    Execute this command in your terminal<br> flutter pub run
+                                    change_app_package_name:main your_new_package_name
+                                    <img src="images/app/changePackageName.png" alt="Elite Quiz">
+                                </li>
+                                <li>
+                                    Change package name for ios app <br>
+
+                                    Open ios folder of this project in xcode. Go Select
+                                    Runner->Targets->General->Identity and enter new package name in Build Identifier.
+                                    <br>
+                                    <img src="images/app/changePackageName1.png" alt="Elite Quiz">
+                                </li>
+                                <li>
+                                    Go to lib/utils/constants.dart and update package.
+                                    <img src="images/app/changePackageName2.png" alt="Elite Quiz">
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToIntegrateFirebase">
+                            <h4>How to integrate firebase</h4>
+                            <ol>
+                                <li>Create firebase project in your account
+                                    <img src="images/app/createFirebase1.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/createFirebase2.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/createFirebase3.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/createFirebase4.jpg" alt="Elite Quiz" /><br>
+                                </li>
+                                <li>Add andorid application to your firebase project
+                                    <img src="images/app/addAndroid.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>Visit https://developers.google.com/android/guides/client-auth to know how to get
+                                    sha-1 and sha-256 key
+                                    <img src="images/app/addAndroid2.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/addAndroid3.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/addAndroid4.jpg" alt="Elite Quiz" /><br>
+                                </li>
+                                <li>You have connected andorid application to your firebase project successfully</li>
+                                <li>Add ios application to your firebase project
+                                    <img src="images/app/addIos.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>Get your bundle id here
+                                    [your-flutter-project-dir]\ios\Runner.xcodeproj\project.pbxproj or search for
+                                    PRODUCT_BUNDLE_IDENTIFIER and you will get following result
+                                    <img src="images/app/addIos3.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/addIos2.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/addIos4.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/addIos5.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/addIos6.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>You have connected ios application to your firebase project successfully</li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToEnableFirebaseAuth">
+                            <h4>How to enable firebase auth</h4>
+                            <ol>
+                                <li>Go to firebase project.Click on authentication menu and goto sign-in method. Enable
+                                    all the authentication method mention in below image
+                                    <img src="images/app/addFirebaseAuth.jpg" alt="Elite Quiz" />
+
+                                </li>
+                                <li>If your are using google sign-in you need to enable OAuth APIs that you want to use
+                                    using
+                                    https://console.developers.google.com/ .Enable people api and make sure you've
+                                    filled out all required fields in the console for OAuth consent screen.
+                                    Otherwise, you may encounter APIException errors.
+                                </li>
+
+                                <li> Please add sha-256 key as shown in below image. Go to project settings -> your apps
+                                    -> android apps
+
+                                    <img src="images/app/auth-1.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li> Please add support email as shown in below image. Go to project settings -> general
+                                    -> public settings
+
+
+                                    <img src="images/app/auth-2.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li> Please add support email as shown in below image. Go to project settings -> general
+                                    -> public settings
+
+
+                                    <img src="images/app/auth-2.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    If you are using phone auth in ios then follow these steps
+
+                                    <br>
+                                    Go to ios/Runner/GoogleService-Info.plist and copy REVERSED_CLIENT_ID
+                                    <img src="images/app/addPhoneAuth.png" alt="Elite Quiz" />
+                                    <br>
+                                    Paste in ios/Runner/Info.plist as shown in below image
+                                    <img src="images/app/addPhoneAuth2.png" alt="Elite Quiz" />
+
+                                </li>
+
+
+
+
+                                <li>If your are using facebook login go to https://developers.facebook.com/ and create
+                                    project and get your application id and applicaiton secret from there.
+                                    <img src="images/app/addFbAuth.jpg" alt="Elite Quiz" />
+                                </li>
+
+
+
+
+                                <li>Set up facebook auth for android
+                                    <br> <br>
+                                    Go to android/app/src/main/res/values/strings.xml and add your app id as shown in
+                                    image
+                                    <br>
+                                    Facebook Client Token :- Facebook Developer Console -> Advance Setting you will get
+                                    it facebook client token
+                                    <img src="images/app/addFbAuth2C.png" alt="Elite Quiz" />
+
+                                    <br><br>
+                                    Go to facebook developer console, Add android app and convert your sha-1 key to hash
+                                    using http://tomeko.net/online_tools/hex_to_base64.php. and add hash key into key
+                                    Hashes section.
+                                    <br><br>
+
+
+                                    Enter your package name in Package Names section.
+
+                                    <br><br>
+
+                                    Enter [your_package_name.main.dart] in Class Name section.
+                                    <br>
+                                    <img src="images/app/addFbAuth3.png" alt="Elite Quiz" />
+
+                                </li>
+
+                                <li>
+                                    Set up facebook auth for ios
+
+                                    <br> <br>
+
+                                    Go to facebook developer, Add ios app and add your bundle id as shown in image
+
+                                    <img src="images/app/addFbAuth4.png" alt="Elite Quiz" />
+
+                                    <br> <br>
+                                    Go to ios/Runner/Info.plist and add facebook app id and Client Token as shown in
+                                    image
+                                    <img src="images/app/addFbAuth56.png" alt="Elite Quiz" />
+                                </li>
+
+
+
+
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToEnableCloudFirestore">
+                            <h4>How to enable cloud firestore</h4>
+                            <ol>
+                                <li>Follow this steps in order to add cloud firestore
+                                    <img src="images/app/addFirestore.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/addFirestore2.jpg" alt="Elite Quiz" /><br>
+                                    <img src="images/app/addFirestore3.jpg" alt="Elite Quiz" />
+                                </li>
+
+                                <li>Change security rules of cloud firestore in order to make your app more secure
+                                    <img src="images/app/addFirestore4.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+                        <section id="howToChangeAppName">
+                            <h4>How to change application name</h4>
+                            <ol>
+                                <li>Change application name for your android application. Go to
+                                    android/app/src/main/AndroidManifest.xml and change name
+                                    <img src="images/app/appName2.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>Change application name for your ios application. Go to ios/Runner/Info.plist and
+                                    change name
+                                    <img src="images/app/appName3.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToChangeAppVersion">
+                            <h4>How to change application version and app launcher icon</h4>
+                            <ol>
+                                <li>
+                                    go to pubspec.yaml EX.Update version:A.B.C+X in pubspec.yaml.
+                                </li>
+                                <li>Do not forget to execute flutter packages get, flutter build or flutter run after
+                                    this step</li>
+                            </ol>
+                            <img src="images/app/changeAppVersion.jpg" alt="Elite Quiz" />
+                            <hr>
+                        </section>
+
+                        <section id="howToChangeAppLogo">
+                            <h4>How to change application logo</h4>
+                            <ol>
+                                <li>For Android For Android, open android > app > src > main > res and add here your
+                                    logo according to device screen size
+                                    <img src="images/app/androidAppIcon.png" alt="Elite Quiz" />
+                                </li>
+                                <li>For IOS open ios > Runner > Assets.xcassets > AppIcon.appiconset here and add your
+                                    logo according to diffrent size.
+                                    <img src="images/app/iosAppIcon.png" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToChangeDatabaseUrl">
+                            <h4>How to change database url and other backend settings</h4>
+                            <ol>
+                                <li>
+                                    Go to lib/utils/constants.dart and make changes shown in below image
+                                    <img src="images/app/changeBaseUrlAndApiParameters.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToConfigureAds">
+                            <h4>How to configure google ads</h4>
+                            <ol>
+                                <li>
+                                    Enable ads from admin panel as show in below image.
+                                    <br>
+                                    If you do not want to add ads in app then skip the further steps
+
+
+                                    <img src="images/app/enable-ads.png" alt="Elite Quiz" />
+
+                                </li>
+                                <li>
+                                    Set up google ads<br>
+                                    Go to android/app/src/main/AndroidManifest.xml and enter android app id as shown in
+                                    below image
+                                    <br>
+                                    Find app id of your app as mention here
+                                    https://support.google.com/admob/answer/7356431?hl=en
+
+                                    <img src="images/app/google-ads-1.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Go to ios/Runner/Info.plist and enter ios app id as shown in below image
+                                    <br>
+                                    Find app id of your app as mention here
+                                    https://support.google.com/admob/answer/7356431?hl=en
+
+                                    <img src="images/app/google-ads-2.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Go to settings/Ads.Settings in admin panel and add google ads id as shown in below
+                                    image
+                                    <img src="images/app/add-googe-ad-ids.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Go to settings/Ads.Settings in admin panel and add facebook ads placement id as
+                                    shown in below image.
+                                    Facebook rewarded ad is not supported for ios as of now. We will sure add support
+                                    for it in future.
+                                    <img src="images/app/add-fb-ad-ids.png" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToSetDefaultLanguage">
+                            <h4>How to set default language</h4>
+                            <ol>
+                                <li>
+                                    By default,default applicaiton language is english. If you want to change default
+                                    language
+                                    go to lib/utils/constants.dart and add your respective language's code shown in
+                                    below image.
+                                    Get your language code from here
+                                    https://developers.google.com/admin-sdk/directory/v1/languages.
+                                    Make sure your language code is avaialble in
+                                    https://developers.google.com/admin-sdk/directory/v1/languages.
+                                    <img src="images/app/changeDefaultLanguage.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    If your default language code is not in supported language list add language code
+                                    in list as shown in below image. Go to lib/utils/constants.dart
+                                    <img src="images/app/addDefaultLanguage.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    If your default language is not in assets/languages/[language-code].json then create
+                                    new file
+                                    in same folder with [language-code].json. Add all the labels from en.json and
+                                    convert label values in your respective language
+                                    <img src="images/app/addNewLanguage.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    copy all the labels form en.json file in your [language-code].json file.
+                                    <img src="images/app/addNewLanguage2.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToAddLanguage">
+                            <h4>How to add new language</h4>
+                            <ol>
+                                <li>
+                                    Go to your admin panel and enable language mode as shown in below image
+                                    <img src="images/app/admin-language-1.png" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Go to your admin panel and add new language as shown in below image
+                                    <img src="images/app/admin-language-2.png" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Add newly added language code in list as shown in below image. Go to
+                                    lib/utils/constants.dart.
+                                    Get your language code from here
+                                    https://developers.google.com/admin-sdk/directory/v1/languages.
+                                    Make sure your language code is avaialble in
+                                    https://developers.google.com/admin-sdk/directory/v1/languages.
+                                    <img src="images/app/addDefaultLanguage.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Create new file
+                                    in assets/languages/ with [language-code].json. Add all the labels from en.json and
+                                    convert label values in your respective language
+                                    <img src="images/app/addNewLanguage.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    copy all the labels form en.json file in your [language-code].json file.
+                                    <img src="images/app/addNewLanguage2.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToChangeAppColors">
+                            <h4>How to change application colors</h4>
+                            <ol>
+                                <li>
+                                    Add your colors in lib/ui/styles/colors.dart and do not change the color variables
+                                    name
+                                    <img src="images/app/changeColors.png" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToChangeAppFont">
+                            <h4>How to change application font</h4>
+                            <ol>
+                                <li>
+                                    Go to lib/app/app.dart and add your font as shown in image
+                                    <img src="images/app/changeFont.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Go to assets/google_fonts/ and add .tff files of fonts.
+                                    <img src="images/app/changeFont2.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToChangeIntroSlideImages">
+                            <h4>How to change intro slider images</h4>
+                            <ol>
+                                <li>
+                                    Go to assets > images folder and add your intro slide images.It is recommended to
+                                    follow same naming convention shown in below image
+                                    <img src="images/app/introSlider.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Go to assets > files > introSliderImages.json file and add intro slider image's name
+                                    in this this file as shown in below image
+                                    <img src="images/app/introSlider2.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToChangeDefaultProfileImages">
+                            <h4>How to change default profile images</h4>
+                            <ol>
+                                <li>
+                                    Go to assets > images > profile folder and add your default profile images.It is
+                                    recommended to follow same naming convention shown in below image
+                                    <img src="images/app/profilePictures.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Go to assets > files > defaultProfileImages.json file and add default profile
+                                    image's name in this this file as shown in below image
+                                    <img src="images/app/profilePictures2.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToChangeJsonAnimations">
+                            <h4>How to change json animations</h4>
+                            <ol>
+                                <li>
+                                    Go to assets > animations folder and add json animaiton files. Make sure to use same
+                                    name shown in below image
+                                    <img src="images/app/changeJsonAnimations.jpg" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+                        <section id="howToConfigureInAppPurchase">
+                            <h4>How to configure in-app purchase</h4>
+                            <ol>
+                                <li>Configure in-app purchase for android applicaiton.
+                                    Upload your application in playstore and create in-app products for your applicaiton
+                                    as shown in below image.
+                                    Id of in-app products (consumable product) in apple and play store must be same.
+                                    <img src="images/app/in-app-purchase-1.png" alt="Elite Quiz" />
+                                </li>
+                                <li>Configure in-app purchase for ios applicaiton.
+                                    Add capibility in your project using xcode as show in below image.
+
+                                    <img src="images/app/in-app-purchase-2.png" alt="Elite Quiz" />
+                                    <br><br>
+                                    Follow this links in order to enable in-purchase.<br>
+                                    https://help.apple.com/app-store-connect/#/devae49fb316.<br>
+                                    https://help.apple.com/app-store-connect/#/devb57be10e7.
+                                    <br>
+                                    For more help visit this https://developer.apple.com/in-app-purchase/.
+                                    <br>
+                                    Id of in-app products (consumable product) in apple and play store must be same.
+
+                                </li>
+                                <li>
+                                    Go to lib/utils/inAppPurchaseProducts.dart.
+                                    Enter coins and in-app product's id (created previously) respective to coin as shown
+                                    in image.
+                                    <img src="images/app/in-app-purchase-3.png" alt="Elite Quiz" />
+                                </li>
+
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToEnableMessageInBattle">
+                            <h4>How to enable message feature in battle</h4>
+                            <ol>
+                                <li>
+                                    Go to firebase project, firestore database -> indexes and create composite query
+                                    index as shown in below images.
+                                    <br>
+                                    <img src="images/app/battle-message-1.png" alt="Elite Quiz" />
+                                    <img src="images/app/battle-message-2.png" alt="Elite Quiz" />
+                                    <img src="images/app/battle-message-3.png" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Go to lib/utils/constants.dart and add predefined messages as per your desire.
+
+                                    <br>
+                                    <img src="images/app/battle-message-4.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    If you want to update emojis then follow these steps.
+                                    Go to assets/images/emojis/ and add new emoji.
+                                    File format of emoji must be svg.
+
+                                    <img src="images/app/battle-message-5.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Add file name of newly added emoji in assets/files/emojis.json file.
+                                    <img src="images/app/battle-message-6.png" alt="Elite Quiz" />
+                                </li>
+
+                            </ol>
+                            <hr>
+                        </section>
+
+
+
+                        <section id="howToConfigureForceUpdate">
+                            <h4>How to configure force update</h4>
+                            <ol>
+                                <li>
+                                    Go to admin panel in settings -> system configurations and enable force update as
+                                    shown in image.
+                                    <br>
+                                    <img src="images/app/force-update.png" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Go to pubspec.yaml and copy the version number of application.
+
+
+                                    <br>
+                                    <img src="images/app/force-update-2.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Go to admin panel in settings -> system configurations and enter the version number
+                                    we just copied.
+
+
+                                    <br>
+                                    <img src="images/app/force-update-3.png" alt="Elite Quiz" />
+                                </li>
+                                <li>
+                                    Go to admin panel in settings -> system configurations and add application url(play
+                                    and app store link).
+                                    Make sure to add correct url otherwise force update will not work as expected.
+
+
+                                    <br>
+                                    <img src="images/app/force-update-4.png" alt="Elite Quiz" />
+                                </li>
+
+                            </ol>
+                            <hr>
+                        </section>
+
+                        <section id="manageBadges">
+                            <h4>Manage Badges</h4>
+                            <ol>
+                                <li>
+                                    Manage badges from here
+                                    <img src="images/app/manage-badges.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    To unlock badges like Super Sonic, Flashback and Brainiac minimum question is set to
+                                    5.<br>
+                                    You can change that as shown in below image.
+                                    <img src="images/app/manage-badges-1.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    To unlock badges like Combat Winner, Clash Winner and Quiz Warrior winner must be
+                                    declared by completing battle.<br>
+                                </li>
+
+                                <li>
+                                    To get more information about how badges works click here.
+                                    <br>
+                                    <a href="files/badges.txt">Badges Details</a>
+
+                                </li>
+
+
+                            </ol>
+                            <hr>
+                        </section>
+
+
+
+
+                        <section id="howToSetupExamModule">
+                            <h4>How to setup exam module</h4>
+                            <ol>
+                                <li>
+                                    Go to admin panel in settings -> system configurations and enable exam module as
+                                    shown in image.
+                                    <br>
+                                    <img src="images/app/exam-module-1.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Go to lib/utils/constants.dart and update exam rules as per your need as shown in
+                                    image.
+                                    <br>
+                                    <img src="images/app/exam-module-2.png" alt="Elite Quiz" />
+                                </li>
+
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToSetupTimer">
+                            <h4>How to set up All Timers And Score</h4>
+                            <ol>
+                                <li>
+                                    Go to admin panel in settings -> System Utilities and you can give All Quiz types
+                                    Timer per Question.
+
+                                    <br>
+
+                                    <img src="images/app/adminTimer.png" alt="Elite Quiz" />
+                                </li>
+
+
+
+                            </ol>
+                            <hr>
+                        </section>
+
+                        <section id="howToSetupEarningModule">
+                            <h4>How to setup earning module</h4>
+                            <ol>
+                                <li>
+                                    Go to admin panel in settings -> Payment settings and enable payment as shown in
+                                    image.
+
+                                    <br>
+
+                                    Per coin will decide amount of coins that will convert in amount. For Example. per
+                                    100 coins x amount will give to user.
+
+                                    <br>
+                                    Per amount will decide on x amount of coins user will get entered amount. For
+                                    Example. per x coins 1 amount will give to user.
+
+                                    <br>
+                                    Note - Consider amount as dollar or any currency. It refer as real money.
+
+
+
+                                    <br>
+                                    <img src="images/app/earning-module-1.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Go to lib/utils/constants.dart and update notes for payment request as per your need
+                                    as shown in image.
+                                    <br>
+                                    <img src="images/app/earning-module-3.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Go to lib/utils/constants.dart and add payment method as per your need.
+                                    <br>
+                                    <img src="images/app/earning-module-2.png" alt="Elite Quiz" />
+                                </li>
+
+                                <li>
+                                    Go to lib/utils/uiUtils.dart and modify coins redeem related equaiton as per your
+                                    need.
+                                    <br>
+                                    <img src="images/app/earning-module-4.png" alt="Elite Quiz" />
+                                </li>
+
+                            </ol>
+                            <hr>
+                        </section>
+
+
+
+
+                        <section id="howToAppConstants">
+                            <h4>How to change application constants</h4>
+                            <ol>
+                                <li>
+                                    If you want to change question duration or other constants as shown in image
+                                    Go to lib/utils/constants.dart and update values
+                                    <img src="images/app/changeOtherConstants.jpg" alt="Elite Quiz" />
+                                    <img src="images/app/changeOtherConstants2.jpg" alt="Elite Quiz" />
+                                </li>
+                                <li>If you want to modify coins distribution equation go to lib/utils/uiUtils.dart and
+                                    updated equaiton as show in below image
+                                    <img src="images/app/coinsEquation.png" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+
+                        <section id="howToGenerateReleaseVersion">
+                            <h4>How to generate release version of this product</h4>
+                            <ol>
+                                <li>To generate release android app-bundle and publish to playstore follow
+                                    https://flutter.dev/docs/deployment/android</li>
+                                <li>To generate release ios apk and publish to appstore follow
+                                    https://flutter.dev/docs/deployment/ios</li>
+                                <li>Before delpoying ios apk to app store make sure you configured below setting
+                                    <br>
+                                    Go To > General > Pricing and Availability > Availability > Edit All Countries or
+                                    Regions Selected & unmark China Mainland there as highlighted in attached
+                                    Screenshot.
+                                    <img src="images/app/appAvailability.png" alt="Elite Quiz" />
+                                </li>
+                            </ol>
+                            <hr>
+                        </section>
+
+                    </section>
+                    <hr class="divider">
+
+                    <section id="support">
+                        <h3>Support</h3>
+                        <p>Its our pleasure to serve our service and support. please contact our support team.</p>
+                        <p>Head of Customer Support : Jay Parmar <a href="https://join.skype.com/invite/yBJSdYmXXLqX"
+                                target="_blank" style="color:#3c55d1">Skype Name : Priyansh Parmar</a></p>
+                        <p>To help our customers, we constantly be in touch with every customer if they need any
+                            assistance regarding our product.
+                            We offer our customers a support from <strong> Mon – Fri 9.00am to 6.00pm IST (GMT +5.30) –
+                                We are a Team located in India – Asia.</strong></p>
+                        <p>Typically we reply our customers for all the questions and queries within 24 hours of time
+                            via comments, support forum or emails.</p>
+                    </section>
+                    <hr class="divider">
+
+                    <section id="rating">
+                        <h3>Your Feedback</h3>
+                        <p>Dear valuable customer,
+                            Thank you very much for choosing our product.
+                            It's our pleasure to serve top-notch service to you.
+                            Please give us your honest feedback that will help us to make a more strong and reliable
+                            product by click here <a
+                                href="https://codecanyon.net/item/elite-quiz-the-flutter-quiz-app/33570423"
+                                style="color:#3c55d1" target="_blank">Rate Us</a>.
+                            Thank you very much.</p>
+                    </section>
+                    <hr class="divider">
+
+                    <section id="contactus">
+                        <h3>Contact Us</h3>
+                        <p>WRTeam has creative and dedicated group of developers who are mastered in Apps Developments
+                            and Web Application Development with a niche in delivering quality solutions to customers
+                            across the globe.
+                            Contact us today to find out how we can help you or for freelance work.
+                        </p>
+                        <p>Visit Us : <a href="https://wrteam.in/" target="_blank">https://wrteam.in</a>
+                        </p>
+                        <p>Mail Us : support@wrteam.in</p>
+                        <p>Thank you very much.</p>
+                    </section>
+                    <hr class="divider">
+
+                </div>
+            </div>
 
         </div>
-        <!-- Document Wrapper end --> 
+        <!-- Content end -->
 
-        <!-- Back To Top --> 
-        <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i class="fa fa-chevron-up"></i></a> 
 
-        <!-- JavaScript
+    </div>
+    <!-- Document Wrapper end -->
+
+    <!-- Back To Top -->
+    <a id="back-to-top" data-toggle="tooltip" title="Back to Top" href="javascript:void(0)"><i
+            class="fa fa-chevron-up"></i></a>
+
+    <!-- JavaScript
         ============================ -->
-        <script src="assets/vendor/jquery/jquery.min.js"></script> 
-        <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> 
-        <!-- Easing --> 
-        <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script> 
-        <!-- Custom Script -->
-        <script src="assets/js/theme.js"></script>
-    </body>
+    <script src="assets/vendor/jquery/jquery.min.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Easing -->
+    <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+    <!-- Custom Script -->
+    <script src="assets/js/theme.js"></script>
+</body>
+
 </html>
