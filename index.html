@@ -95,9 +95,11 @@
                             <li class="nav-item"><a class="nav-link" href="#howToGenerateReleaseVersion">Generate Release Version of This Product</a></li>
                         </ul>
                     </li>
+                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ & Common Issues</a></li>
                     <li class="nav-item"><a href="#support" class="nav-link">Contact Support</a></li>
                     <li class="nav-item"><a href="#rating" class="nav-link">Your Feedback</a></li>
                     <li class="nav-item"><a href="#contactus" class="nav-link">Reach Us</a></li>
+                    <li class="nav-item"><a href="#changelogs" class="nav-link">Changelogs</a></li>
                 </ul>
             </div>
 
@@ -108,8 +110,8 @@
                     <!-- Getting Started -->
                     <section id="introduction">
                         <h3>Thank You for your purchase</h3>
-                        <p>Thank you for choosing our code. We value your purchase and aim to deliver exceptional service.
-                            If you need help with the code or documentation,<br> contact our <a href="#support" style="color: #3c55d1;">Support Team here</a>.<p>
+                        <p>Thank you for choosing our code. We appreciate your purchase and aim to provide exceptional service.</p>
+                        <p>If you need help with the code or documentation, contact our <a href="#support">Support Team here</a>.</p>
                         <hr>
                     </section>
 
@@ -127,8 +129,10 @@
                                 <li>Uploading the source code to Server
                                     <br/><span>i. Begin by extracting the Source Code you acquired from CodeCanyon.</span>
                                     <br/><span>ii. Unpack the Admin Panel zip file and proceed to upload the PHP Code Folder's contents onto your Server.</span>
-                                    <br/><span><b>Note :-</b> .htaccess file is essential; kindly verify its existence. If it is not visible, enable the option to display hidden files.</span>
-                                    <br/><span><b>Note :-</b> Supported PHP versions are 7.4 to 8.1.</span>
+                                    <br>
+                                    <br/><span><strong style="color: red;">Note :-</strong> .htaccess file is essential; kindly verify its existence. If it is not visible, enable the option to display hidden files.</span>
+                                    <br/><span><strong style="color: red;">Note :-</strong> Supported PHP versions are 7.4 to 8.1.</span>
+                                    <br>
                                 </li>
                                 <li>
                                     Now head to your project's URL (e.g., mydomain.com or subdomain.mydomain.com).<br>
@@ -138,7 +142,7 @@
                             <p>Great news! You're all set to start your Elite Quiz experience at:
                                 <a href="https://elitequiz.wrteam.me">https://elitequiz.wrteam.me</a>
                             </p>
-                            <b>Default Login Details</b><br>
+                            <strong>Default Login Details</strong><br>
                             User: admin<br>
                             Pass: admin123<br>
                             <br><hr>
@@ -146,8 +150,11 @@
 
                         <section id="customize-panel">
                             <h4>Customize Admin Panel for your brand</h4>
-                            <img src="images/panel/profile.webp" alt='Customize Panel'
-                                title='Customize Panel'>
+                            <img src="images/panel/profile.webp" alt='Customize Panel' title='Customize Panel' />
+                            <ul>
+                                <li>Change Login Page Background Image & Bot Image from here</li>
+                                <li>Add the JWT Key, which will be used to generate users token for added security.</li>
+                            </ul>
                             <br><hr>
                         </section>
 
@@ -215,12 +222,12 @@
                             <h4>Change app package name</h4>
                             <ol>
                                 <li>
-                                    If you are using <b>Android Studio</b>, you can press <code>CTRL+SHIFT+R</code> to open Replace in Files tool.<br>
-                                    then search our pacakge name <code>com.wrteam.flutterquiz</code> and replace it with your package name in all places.<br>
+                                    If you are using <strong>Android Studio</strong>, you can press <code>CTRL+SHIFT+R</code> to open Replace in Files tool.<br>
+                                    then search our package name <code>com.wrteam.flutterquiz</code> and replace it with your package name in all places.<br>
                                 </li>
                                 <img src="images/app/studio_replace_pkg_name.webp" alt="Android Studio Replace Package Name"/>
                                 <li>
-                                    And if you are using <b>VS Code</b>, you can press <code>CTRL+SHIFT+F</code> to open Find in Files Tool.<br>
+                                    And if you are using <strong>VS Code</strong>, you can press <code>CTRL+SHIFT+F</code> to open Find in Files Tool.<br>
                                     then search our package name <code>com.wrteam.flutterquiz</code> and replace it with your package name in all places.<br>
                                 </li>
                                 <img src="images/app/vs_code_replace_pkg_name.webp" alt="VS Code Replace Package Name" height="auto"/>
@@ -251,19 +258,19 @@
                             </li><br>
                                 <li>Now, fill in the details, to get your SHA-1 & SHA-256 keys visit <a href="https://developers.google.com/android/guides/client-auth">https://developers.google.com/android/guides/client-auth</a>.
                                     <br>SHA keys are required for using firebase authentication.
-                                    <img src="images/app/addAndroid2.webp"  /><br>
-                                    <img src="images/app/addAndroid3.webp"  /><br>
-                                    <img src="images/app/addAndroid4.webp"  /><br>
-                                    <img src="images/app/addAndroid5.webp"  /><br>
-                                    <img src="images/app/addAndroid6.webp"  /><br>
+                                    <img src="images/app/addAndroid2.webp"/><br>
+                                    <img src="images/app/addAndroid3.webp"/><br>
+                                    <img src="images/app/addAndroid4.webp"/><br>
+                                    <img src="images/app/addAndroid5.webp"/><br>
+                                    <img src="images/app/addAndroid6.webp"/><br>
                                 </li>
                                 <br>
                                 <li>Now it's time for connecting IOS to your Firebase Project.
-                                    <img src="images/app/addIos.webp"  />
+                                    <img src="images/app/addIos.webp"/>
                                 </li>
-                                    <img src="images/app/addIos2.webp"  /><br>
-                                    <img src="images/app/addIos4.webp"  /><br>
-                                    <img src="images/app/addIos5.webp"  /><br>
+                                    <img src="images/app/addIos2.webp"/><br>
+                                    <img src="images/app/addIos4.webp"/><br>
+                                    <img src="images/app/addIos5.webp"/><br>
                                 </li>
                             </ol>
                                 <p>Congrats! You have successfully connected your android & IOS app to your firebase project.</p>
@@ -276,22 +283,22 @@
                             <ol>
                                 <li>
                                     Head to your Firebase project, click on the authentication menu, and enable all the mentioned sign-in methods from the image.
-                                    <img src="images/app/addFirebaseAuth.webp"  />
+                                    <img src="images/app/addFirebaseAuth.webp"/>
                                 </li>
-                                <p><b>Note :- </b>If your are using google sign-in you need to enable OAuth APIs that you want to use using <a href="https://console.developers.google.com/">https://console.developers.google.com/</a>.<br>
+                                <p><strong style="color: red;">Note :- </strong>If your are using google sign-in you need to enable OAuth APIs that you want to use using <a href="https://console.developers.google.com/">https://console.developers.google.com/</a>.<br>
                                     Enable people api and make sure you've filled out all required fields in the console for OAuth consent screen.<br>
-                                    Otherwise, you may encounter <b>APIException errors</b>.
+                                    Otherwise, you may encounter <strong>APIException errors</strong>.
                                 </p>
 
                                 <li>Add the SHA-256 key as shown in below image. Go to Project Settings -> Your apps -> Android apps
-                                    <img src="images/app/auth-1.webp"  />
+                                    <img src="images/app/auth-1.webp"/>
                                 </li>
 
                                 <li>If you want to use Phone authentication in IOS then
                                     <ol>
                                         <li>
                                             Go to <code>ios/Runner/GoogleService-Info.plist</code> and copy <code>REVERSED_CLIENT_ID</code>
-                                            <img src="images/app/addPhoneAuth.webp"  />
+                                            <img src="images/app/addPhoneAuth.webp"/>
                                         </li>
                                         <li>
                                             Paste it in <code>ios/Runner/Info.plist</code> as shown in below image
@@ -310,9 +317,9 @@
                             <br>Follow these steps shown in images below.
                             </p>
                             
-                            <img src="images/app/addFirestore.webp"  /><br>
-                            <img src="images/app/addFirestore2.webp"  /><br>
-                            <img src="images/app/addFirestore3.webp"  /><br><br>
+                            <img src="images/app/addFirestore.webp"/><br>
+                            <img src="images/app/addFirestore2.webp"/><br>
+                            <img src="images/app/addFirestore3.webp"/><br><br>
                             <p>
                                 Make Sure to add these rules in your firestore, otherwise it won't work.
                             </p>
@@ -324,7 +331,7 @@
         }
     }
 }</code><br>
-                            <img src="images/app/addFirestore4.webp"  />
+                            <img src="images/app/addFirestore4.webp"/>
                             <br><hr>
                         </section>
 
@@ -334,7 +341,7 @@
                             <ol>
                                 <li>
                                     Go to <code>lib/utils/constants/constants.dart</code> and add your admin panel url, like shown in the image below.
-                                    <img src="images/app/changeBaseUrlAndApiParameters.webp"  />
+                                    <img src="images/app/changeBaseUrlAndApiParameters.webp"/>
                                 </li>
                             </ol>
                             <hr>
@@ -343,11 +350,11 @@
                         <section id="notification-management">
                             <h4>Enable Notifications for App</h4>
                             <p>Access your Firebase project and locate "Project Settings" > "Cloud Messaging" as shown in the image.</p>
-                            <img src="images/panel/go_to_googlecloud.webp" /><br/><br/>
+                            <img src="images/panel/go_to_googlecloud.webp"/><br/><br/>
                             <p>Then, enable Cloud Messaging in Google Cloud.</p>
                             <img src="images/panel/enable_cloud_messaging.webp" />
                             <p>Comeback to firebase project, copy the Server Key, and paste it under "Settings" > "Notification Settings"</p>
-                            <img src="images/panel/notification-setting.webp" />
+                            <img src="images/panel/notification-setting.webp"/>
                             <hr>
                         </section>
 
@@ -359,7 +366,7 @@
                                 <li>
                                     Go to <code>pubspec.yaml</code> Update the <code>version:A.B.C+X</code> as shown in image below.
                                 </li>
-                                <b>Note :- </b>Make sure execute <code>flutter packages get</code>, <code>flutter build</code> or <code>flutter run</code> after changing the version.
+                                <strong style="color: red;">Note :- </strong>Make sure execute <code>flutter packages get</code>, <code>flutter build</code> or <code>flutter run</code> after changing the version.
                             <img src="images/app/changeAppVersion.webp"  />
                             <br><br>
                         </section>
@@ -367,10 +374,10 @@
                         <section id="howToChangeAppLogo">
                             <h4>Change App Logo</h4>
                             <ol>
-                                <li><b>For Android</b>, open android > app > src > main > res and add here your logo according to device screen size
+                                <li><strong>For Android</strong>, open android > app > src > main > res and add here your logo according to device screen size
                                     <img src="images/app/androidAppIcon.webp"  />
                                 </li>
-                                <li><b>For IOS open</b>, ios > Runner > Assets.xcassets > AppIcon.appiconset here and add your
+                                <li><strong>For IOS open</strong>, ios > Runner > Assets.xcassets > AppIcon.appiconset here and add your
                                     logo according to diffrent size.
                                     <img src="images/app/iosAppIcon.webp"  />
                                 </li>
@@ -442,26 +449,26 @@
                                 Find your app ID here: <a href="https://support.google.com/admob/answer/7356431?hl=en">https://support.google.com/admob/answer/7356431?hl=en</a>.
                             <ol>
                                 <li>
-                                    For <b>Android</b>, go to <code>android/app/src/main/AndroidManifest.xml</code> and enter android App Id
+                                    For <strong>Android</strong>, go to <code>android/app/src/main/AndroidManifest.xml</code> and enter android App Id
                                     as shown in below image.<br>
                                     <img src="images/app/google-ads-1.webp"  />
                                 </li>
                         
                                 <li>
-                                    For <b>IOS</b>, go to <code>ios/Runner/Info.plist</code> and enter IOS App Id as shown in below
+                                    For <strong>IOS</strong>, go to <code>ios/Runner/Info.plist</code> and enter IOS App Id as shown in below
                                     image.<br>
-                                    <img src="images/app/google-ads-2.webp"  />
+                                    <img src="images/app/google-ads-2.webp"/>
                                 </li>
                         
                                 <li>
                                     Go to <code>Settings > Ads.Settings</code> in admin panel and add AdMob ad ids as shown in below image.
-                                    <img src="images/app/add-googe-ad-ids.webp"  />
+                                    <img src="images/app/add-googe-ad-ids.webp"/>
                                 </li>
                             </ol>
 
                             <h5> Unity Ads</h5>
                             Go to <code>Settings > Ads.Settings</code> in admin panel and add Unity ad ids as shown in below image.
-                            <img src="images/app/add-unity-ad-ids.webp"  />
+                            <img src="images/app/add-unity-ad-ids.webp"/>
                             <hr>
                         </section>
 
@@ -469,7 +476,7 @@
                             <h4>Change intro slider images</h4>
                             <li>
                                 Update SVGs in <code>assets/images</code> folder using the same filenames shown in the images.
-                                <img src="images/app/introSlider.webp" />
+                                <img src="images/app/introSlider.webp"/>
                             </li>
                             <hr>
                         </section>
@@ -480,11 +487,11 @@
                             <ol>
                                 <li>
                                     Update Avatars in <code>assets/images/profile</code> folder using the same filenames preferably shown in the images.
-                                    <img src="images/app/profilePictures.webp" />
+                                    <img src="images/app/profilePictures.webp"/>
                                 </li>
                                 <li>
                                     Then add those filenames in <code>assets/files/defaultProfileImages.json</code> file.
-                                    <img src="images/app/profilePictures2.webp" />
+                                    <img src="images/app/profilePictures2.webp"/>
                                 </li>
                             </ol>
                             <hr>
@@ -501,14 +508,14 @@
                                     Upload your application to the Play Store and create in-app products as shown in the image.
                                     Ensure that the ID of consumable products in both Apple and Play Store is the same.
                                     <br>
-                                    <img src="images/app/in-app-purchase-1.webp"  />
+                                    <img src="images/app/in-app-purchase-1.webp"/>
                                 </li>
                             </ul>
                             <h5>For IOS (App Store)</h5>
                             <ul>
                                 <li>
                                     Open the <code>ios</code> folder of the project into Xcode. Go to Capabilities. And enable "In-App Purchase" as shown in image.
-                                    <img src="images/app/in-app-purchase-2.webp"  />
+                                    <img src="images/app/in-app-purchase-2.webp"/>
                                 </li>
                                 <li>
                                     use the following links to get help enabling in-app purchases:<br>
@@ -689,21 +696,38 @@
                         <section id="howToGenerateReleaseVersion">
                             <h4>Generate release version of this product</h4>
                             To generate the release version of this application, please refer to the platform-specific guides: <a href="https://flutter.dev/docs/deployment/android">Android</a> <a href="https://flutter.dev/docs/deployment/ios">IOS</a>.<br>
-                            <b>Important:</b> Before deploying to IOS, ensure that the "China" option is unchecked as demonstrated in the image below.
+                            <strong>Important:</strong> Before deploying to IOS, ensure that the "China" option is unchecked as demonstrated in the image below.
                             <img src="images/app/appAvailability.webp"/>
                             <br><br>
-                            <h5>For data safety issues in the Play Store or app rejection, watch the given tutorial below to resolve the problem.</h5>
-                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/f8rjX7_QL44" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
-                                <a href="https://www.youtube.com/watch?v=f8rjX7_QL44">https://www.youtube.com/watch?v=f8rjX7_QL44</a>
-                            </iframe>
                         </section>
                         <br><hr>
                     </section>
 
+                    <section id="faq">
+                        <h3>FAQ & Common Issues</h3>
+                        <ol>
+                            <li>If you are seeing warnings on admin panel after the installation, then check if the warning contains <code>ini_set()</code>
+                                <img class="img-fluid border" src="images/panel/ob_start.webp" />
+                                <h5>Solution:</h5>
+                                <p>Then Add <code>ob_start();</code> in your <code>index.php</code> file, like shown in the image.</p>
+                                <p>
+                                    <img class="img-fluid border" src="images/panel/ob_start-ans.png" style="max-width: 50%;"/>
+                                </p>
+                            </li>
+                        </ol>
+                        <h6></h6>
+
+                        <h5>For data safety issues in the Play Store or app rejection, watch the given tutorial below to resolve the problem.</h5>
+                        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/f8rjX7_QL44" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen>
+                            <a href="https://www.youtube.com/watch?v=f8rjX7_QL44">https://www.youtube.com/watch?v=f8rjX7_QL44</a>
+                        </iframe>
+                    </section>
+                    <br><hr>
+
                     <section id="support">
                         <h3>Contact Support</h3>
-                        Delighted to serve and support you! Contact our support team led by Jay Parmar on <a href="https://join.skype.com/invite/yBJSdYmXXLqX">Skype</a>.<br><br>
-                        <b>We're available Mon-Fri, 9:00 am - 6:00 pm IST (GMT +5.30), India - Asia.</b><br><br>
+                        Delighted to serve and support you! Contact our support team lead by Jay Parmar on <a href="https://join.skype.com/invite/yBJSdYmXXLqX">Skype</a>.<br><br>
+                        <strong>We're available Mon-Fri, 9:00 am - 6:00 pm IST (GMT +5.30), India - Asia.</strong><br><br>
                         Expect prompt responses within 24 hours via comments, forum, or email.<br>
                     <br><hr>
                     </section>
@@ -724,8 +748,50 @@
                             Visit us at <a href="https://wrteam.in/">wrteam.in</a> or drop an email to <a href="mailto:support+elitedoc@wrteam.in">support@wrteam.in</a>.<br><br>
                             Thank you for considering us!
                         </p>
+                        <hr><br>
+                    </section>
+
+                
+
+                    <section id="changelogs">
+                        <h2>Changelogs</h2>
+                        <p class="text-4">See what's new added, changed, fixed, improved or updated in the latest versions. </p>
+                        
+                        <h3> Version 2.1.2 <small class="text-muted">(21 Sep, 2023)</small></h3>
+                        <ul class="changelog">
+                            <li><span class="badge badge-success">Added</span>
+                                🤖 <strong>1v1 Battles with Bots:</strong> No opponent? No problem! Battle out AI bots for non-stop gaming fun!
+                            </li>
+                            <li><span class="badge badge-success">Added</span>
+                                🌟 <strong>Premium Quiz Categories:</strong> Elevate your quiz game with Premium Categories and Subcategories, available in all the quizzes!.
+                            </li>
+                            <li><span class="badge badge-info">Updated</span>
+                                🍏 <strong>Apple Login Upgrade:</strong> We've migrated to the <code>sign_in_with_apple</code> package for secure Apple login.
+                            </li>
+                            <li><span class="badge badge-info">Improved</span>
+                                🧹 <strong>App Optimization:</strong> Trimmed down app size by removing unused packages and code.
+                            </li>
+                            <li><span class="badge badge-info">Improved</span>
+                                🚀 <strong>Code Refinement:</strong> Cleaner and more efficient codebase.
+                            </li>
+
+                            <li><strong>Admin Panel Specific</strong></li>
+                            <li><span class="badge badge-success">Added</span>
+                                🚀 <strong>Premium Quiz Categories:</strong> Create and edit premium categories/subcategories.
+                            </li>
+                            <li><span class="badge badge-success">Added</span>
+                                🌟 <strong>Revamped Login Page Design Experience:</strong> Customize it with Your Own Background Image for a Unique Touch.
+                            </li>
+                            <li><span class="badge badge-success">Added</span>
+                                🎨 <strong>Custom Bot Image:</strong> Personalize your Bot's look easily from the Admin Panel! 
+                            </li>
+                            <li><span class="badge badge-danger">Fixed</span>
+                                🔐 <strong>Reinforced Security:</strong> We've brought back the JWT Key input for enhanced security within the admin panel.
+                            </li>
+                        </ul>
                         <hr><br><br>
                     </section>
+
                 </div>
             </div>
         </div>
