@@ -264,7 +264,9 @@
                                     necessary dependencies.
                                 </li>
                                 <li>
-                                    For iOS users, execute the following commands in the terminal:
+                                    If you want to run the app in IOS simulator (otherwise skip this step), then execute
+                                    the following commands in
+                                    the terminal:
                                     <br>
                                     <code>cd ios<br>pod install<br>cd ..</code>
                                 </li>
@@ -305,9 +307,6 @@
                         <section id="howToChangeAppName">
                             <h4>Change application name</h4>
                             <p>Similarly you can change the app name by finding and replacing in all the places.</p>
-                            <li>For Android Studio</li>
-                            <img src="images/app/appName2.webp" />
-                            <li>For VS Code</li>
                             <img src="images/app/appName2.webp" />
                             <br>
                             <hr>
@@ -327,11 +326,15 @@
                                 </li><br>
                                 <li>Now, fill in the details, to get your SHA-1 & SHA-256 keys visit <a
                                         href="https://developers.google.com/android/guides/client-auth">https://developers.google.com/android/guides/client-auth</a>.
-                                    <br>SHA keys are required for using firebase authentication.
+                                    <br>SHA keys are required for using firebase authentication. if you have doubts
+                                    about SHA keys, <a href="#sha-keys">click here.</a>
                                     <img src="images/app/addAndroid2.webp" /><br>
                                     <img src="images/app/addAndroid3.webp" /><br>
+                                    <strong>Skip this step</strong>
                                     <img src="images/app/addAndroid4.webp" /><br>
+                                    <strong>Skip this step</strong>
                                     <img src="images/app/addAndroid5.webp" /><br>
+                                    Continue
                                     <img src="images/app/addAndroid6.webp" /><br>
                                 </li>
                                 <br>
@@ -339,6 +342,7 @@
                                     <img src="images/app/addIos.webp" />
                                 </li>
                                 <img src="images/app/addIos2.webp" /><br>
+                                <strong>Skip this step</strong>
                                 <img src="images/app/addIos4.webp" /><br>
                                 <img src="images/app/addIos5.webp" /><br>
                                 </li>
@@ -855,13 +859,98 @@
                             <img src="images/app/appAvailability.webp" />
                             <br><br>
                         </section>
+                        <hr>
+                    </section>
+
+                    <section id="sha-keys">
+                        <h4>SHA keys and Keystore Basics</h4>
+                        For Android build you need to understand few things.
+                        <ul>
+                            <li>
+                                Basically Keystore file is used for signing your app. each keystore file having SHA
+                                keys, which gets associated with your app.
+                            </li>
+                            <li>
+                                SHA keys are required for android version of the app's login and battles functionalites
+                                to work.
+                            </li>
+                            <li>
+                                Firstly, there are 2 keystores important, <code>debug.keystore</code> which might be
+                                already present after you have installed android studio and release/upload keystore,
+                                which you will have to create when you want to publish the app.
+                            </li>
+                            <li>To get the debug SHA keys from debug.keystore<br>
+                                Mac:
+                                <code>keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore</code><br>
+                                Windows:
+                                <code>keytool -list -v -alias androiddebugkey -keystore %USERPROFILE%\.android\debug.keystore</code>
+                            </li>
+                        </ul>
+                        But we also need to check if we are using debug.keystore or not.<br>
+                        <ul>
+                            <li>
+                                go to <code>android/app/build.gradle</code> and scroll down to buildTypes as shown in
+                                the image.
+                                <img class="img-fluid border" src="images/app/android_build_mode.png" />
+                            </li>
+                            <li>
+                                you can select which keystore to use for signing by commenting and uncommenting them.
+                            </li>
+                        </ul>
+                        Select debug, while you are developing. and when you are ready to publish the app you
+                        can select the release.
+                        <ul>
+                            <li>
+                                Now, run the app in android once, after running the app, in the terminal go to android
+                                folder then,
+                                <br> run <code>./gradlew :app:signingReport</code> it will output which keystore the app
+                                is signed with currently.
+                            </li>
+                            <li>
+                                add both SHA-1 and SHA-256 keys in your firebase project. then re-download the Google
+                                Services json file
+                            </li>
+                        </ul>
+
+                        <h5>To Create Upload Keystore</h5>
+                        To create upload keystore, using keytool use below command.
+                        <li>
+                            <code>keytool -genkey -v -keystore upload.jks -alias key -keyalg RSA -keysize 4096
+                                -storepass upload123 -keypass upload123 -validity 10000</code>
+                        </li>
+                        <li>
+                            upload.jks is file name, upload123 is password for keystore. change them accordingly.
+                            Don't use the same password as here.
+                        </li><br>
+                        To read the keystore details
+                        <ul>
+
+                            <li>
+                                <code>keytool -v -list -keystore upload.jks -storepass upload123 -keypass upload123</code>
+                            </li>
+                            <li>Then sign your app with upload.jks for release build by adding it’s details in
+                                <code>android/key.properties</code> as shown in the image.
+                                <img class="img-fluid border" src="images/app/keystore_ properties.png" />
+                            </li>
+                            <li>rebuilding the app again should use your new upload keystore.</li>
+                            <li>
+                                Add both SHA-1 and SHA-256 keys in your firebase project. then re-download the Google
+                                Services json file.
+                            </li>
+                        </ul>
+                        <span class="badge badge-danger text-uppercase mr-2">Important</span>
+                        If you are signing your app with upload keystore, make sure you have
+                        both debug and upload keystore's SHA keys present in the firebase.
+                        <br><br>
+                        And finally after you have published your app on play console, you need to add 4 more
+                        SHA keys in the firebase from the play console.<br>to get them follow this link:
+                        <a href="https://play.google.com/console/developers/app/keymanagement">https://play.google.com/console/developers/app/keymanagement
+                        </a>
+                        <br>
                         <br>
                         <hr>
                     </section>
 
-                    <section id="idocs_faq">
-
-                    </section>
                     <section id="faq">
                         <h2>FAQ</h2>
                         <div class="row">
