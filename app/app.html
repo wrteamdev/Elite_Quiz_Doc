@@ -296,7 +296,7 @@
 							<section id="system-configurations">
 								<h4>Settings for the App</h4>
 								<img
-									src="../images/panel/system-configurations.webp"
+									src="../images/app/system-configurations.webp"
 									alt="System Configurations"
 									title="System Configurations" />
 								<ul>
@@ -343,7 +343,7 @@
 								<h4>1. Setup flutter</h4>
 								<p>
 									<span class="badge badge-danger text-uppercase mr-2">important</span>
-									Install the current supported <strong>Flutter v3.16.9 (Latest)</strong> from the
+									Install the current supported <strong>Flutter v3.19.3 (Latest)</strong> from the
 									<strong>Stable channel</strong>.
 								</p>
 								<p>
@@ -464,7 +464,7 @@
 								<p>
 									Similarly you can change the app name by finding and replacing in all the places.
 								</p>
-								<img src="../images/app/appName2.webp" />
+								<img src="../images/app/rename_app.webp" />
 								<br />
 								<hr />
 							</section>
@@ -633,7 +633,7 @@ service cloud.firestore {
 											<span class="badge badge-danger text-uppercase mr-2">Important</span>
 											Make sure to check if the admin panel is http or https.
 										</p>
-										<img src="../images/app/changeBaseUrlAndApiParameters.webp" />
+										<img src="../images/app/change_admin_panel_url.webp" />
 									</li>
 								</ol>
 								<hr />
@@ -816,7 +816,64 @@ service cloud.firestore {
 								<code>Settings > Ads.Settings</code>
 								in admin panel and add Unity ad ids as shown in below image.
 								<img src="../images/app/add-unity-ad-ids.webp" />
-								<hr />
+
+								<h5>Daily Watch Ads</h5>
+								<p>
+									Daily Watch Ads are Reward Ads shown to user in home screen. Users can choose to
+									watch ads to earn some coins. for daily watch ads you can limit how many time a
+									day user can watch ad to earn coin. and how much coin will they get per ad.
+								</p>
+								<center>
+									<img
+										class="img-fluid border rounded-lg"
+										style="max-width: 216px"
+										src="../images/app/mobile_daily_ads_example.webp" />
+								</center>
+								<p>And you can change settings for it from <code>Ads Settings</code></p>
+								<img src="../images/app/daily_watch_ads_settings.webp" />
+
+								<h5>Placements of the Ads</h5>
+								<p><strong>Banner Ads</strong></p>
+								<p>Banner Ads are shown screens which are mainly used to show list. like,</p>
+								<ul>
+									<li>Category List Screen</li>
+									<li>Sub Category List Screen</li>
+									<li>Levels List Screen</li>
+									<li>Sub Category & Levels List Screen</li>
+									<li>Exams List Screen</li>
+									<li>Fun'N'Learn List Screen</li>
+								</ul>
+
+								<p><strong>Interstitial Ads</strong></p>
+								<p>
+									Interstitial Ads are shown in places when user enters some section & before
+									showing result.
+								</p>
+								<ul>
+									<li>Before Showing Result Screen</li>
+									<li>
+										Going to sections from Menu Screen like, Notifications, Wallet, Statistics, etc
+									</li>
+									<li>before going to Categories List Screen</li>
+								</ul>
+
+								<p><strong>Reward Ads</strong></p>
+								<p>Rewards Ads are shown in only specific scenarios,</p>
+								<ul>
+									<li>
+										like when creating Battle Room if user doesn't have enough Coins. or when
+										playing Random Battle user doesn't have enough coins.
+									</li>
+									<li>
+										When playing quiz zone, if user doesn't have enough coins for using lifelines.
+										And similarly in Guess The Word when user tries to use hint without enough
+										coins.
+									</li>
+									<li>
+										Also in homescreen, user can opt in to watch Daily Ads to earn more coins by
+										watching video ads.
+									</li>
+								</ul>
 							</section>
 
 							<section id="howToChangeIntroSlideImages">
@@ -856,6 +913,22 @@ service cloud.firestore {
 
 							<section id="howToConfigureInAppPurchase">
 								<h4>Configure In-App purchases</h4>
+								<p>
+									For In App Products to show up in the app, first you will need to at least publish
+									the app in closed or internal testing, and create products in app store and/or
+									play console. then create the same products with same product_id in admin panel.
+									remember product_id should be same in admin panel products and app store/play
+									console.
+								</p>
+								<p>
+									Once you have created IAP(In-App-Purchase) Products in app store/play console and
+									in admin panel and published the app in closed/internal testing. verify that it is
+									showing up in the app.
+								</p>
+								<p>
+									Follow the below given resources for creating IAP in app store / play console. and
+									in admin panel
+								</p>
 								<p>
 									For creating in-app purchase products refer to the documentation here:
 									<a href="https://developer.apple.com/in-app-purchase/">Apple</a>,
@@ -911,6 +984,16 @@ service cloud.firestore {
 										<img src="../images/app/in-app-purchase-3.webp" />
 									</li>
 								</ul>
+								<h6>To Enable Remove Ads feature</h6>
+								<ol>
+									<li>
+										Create an product with product id of <code>remove_ads</code> in the admin panel
+									</li>
+									<li>
+										Then Create an <strong>Non-Consumable</strong> Product in the App Store/Play
+										Console with the same product id (<code>remove_ads</code>)
+									</li>
+								</ol>
 								<br />
 								<hr />
 							</section>
