@@ -356,10 +356,22 @@
 						<section id="quiz_app">
 							<h3>Elite Quiz App</h3>
 							<section id="howToSetupFlutter">
-								<h4>1. Setup flutter</h4>
+								<h5>Required Softwares</h5>
+								<ul>
+									<li>Android Studio</li>
+									<li>Flutter</li>
+									<li>Java Version 21</li>
+								</ul>
+								<p>Additionally, for Macos</p>
+								<ul>
+									<li>HomeBrew</li>
+									<li>Cocoapods</li>
+									<li>XCode 15</li>
+								</ul>
+								<h4>Setup flutter</h4>
 								<p>
 									<span class="badge badge-danger text-uppercase mr-2">important</span>
-									Install the current supported <strong>Flutter v3.19.3 (Latest)</strong> from the
+									Install the current supported <strong>Flutter v3.19.5 (Latest)</strong> from the
 									<strong>Stable channel</strong>.
 								</p>
 								<p>
@@ -367,7 +379,7 @@
 									<a href="https://docs.flutter.dev/get-started/install">
 										https://docs.flutter.dev/get-started/install
 									</a>
-									for a complete installation guide.
+									for a complete installation guide for your platform.
 									<br />
 									Prefer video tutorials? Check out the playlist:
 									<br />
@@ -395,6 +407,11 @@
 									<span class="badge badge-danger text-uppercase mr-2">important</span>
 									Android Toolchain, Android Studio, and XCode for Mac users should be correctly
 									configured.
+								</p>
+								<p>
+									If you are using Android Studio, install the <code>flutter</code> &
+									<code>dart</code> plugin from Android Studio plugin market place. <br />and if you
+									are using VS Code you can install <code>flutter</code> extension.
 								</p>
 								<p>
 									If not do the necessary steps to resolve them, check the official fluter
@@ -535,6 +552,20 @@
 									<img src="../images/app/addIos4.webp" />
 									<br />
 									<img src="../images/app/addIos5.webp" />
+									<br />
+									<li>Finally, We need to add firebase services json file into the Admin panel.</li>
+									<br />
+									<p>
+										Download the firebase json by opening your Firebase Project > Project Settings >
+										Services Account, and clicking generate new key.
+									</p>
+									<img src="../images/panel/download_services_json.webp" />
+									<br />
+									<p>
+										Upload the downloaded services json in the admin panel by going to Settings >
+										Firebase Configurations section, as shown in the image.
+									</p>
+									<img src="../images/panel/upload_services_json.webp" />
 									<br />
 								</ol>
 								<p>
