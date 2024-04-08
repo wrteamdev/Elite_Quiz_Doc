@@ -107,6 +107,11 @@
 									</a>
 								</li>
 								<li class="nav-item">
+									<a class="nav-link" href="#howToChangeSplashAndAuthAppLogo"
+										>Change Splash Logo and Authentication Screen App Logo</a
+									>
+								</li>
+								<li class="nav-item">
 									<a class="nav-link" href="#howToSetDefaultLanguage">Set App's Default Language</a>
 								</li>
 								<li class="nav-item">
@@ -117,6 +122,11 @@
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#howToConfigureAds">Configure Ads</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="#howToCreateUMPMessage"
+										>Create the AdMob UMP/GDPR message</a
+									>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#howToChangeIntroSlideImages">
@@ -732,6 +742,32 @@ service cloud.firestore {
 								<hr />
 							</section>
 
+							<section id="howToChangeSplashAndAuthAppLogo">
+								<h4>Change Splash and Organization Logo</h4>
+								<img
+									class="img-fluid border rounded-lg"
+									style="max-width: 216px"
+									src="../images/app/change_splash_and_org_logo.webp" />
+								<p>
+									To change the splash and Organization logo, you can replace svg logo files called
+									<code>splash_logo.svg</code> & <code>org_logo.svg</code>. and if you are using png
+									images then you will have to add them in <code>assets/images</code> and change its
+									name from .svg to .png or .jpg
+									<code>lib/utils/constants/assets_constants.dart</code>
+									<img src="../images/app/change_splash_and_org_logo_extension.webp" />
+								</p>
+								<h4>Change Authentication Screen App Logo</h4>
+								<img
+									class="img-fluid border rounded-lg"
+									style="max-width: 216px"
+									src="../images/app/change_app_logo.webp" />
+								<p>
+									Similarly, you can replace <code>app_logo.svg</code> in assets/images and/or
+									change the extension by changing it in <code>assets_constants.dart</code> file
+								</p>
+								<img src="../images/app/change_app_logo_extension.webp" />
+							</section>
+
 							<section id="howToChangeAppLogo">
 								<h4>Change App Logo</h4>
 								<ol>
@@ -921,6 +957,74 @@ service cloud.firestore {
 										watching video ads.
 									</li>
 								</ul>
+								<hr />
+							</section>
+
+							<section class="howToCreateUMPMessage">
+								<h4>Create the AdMob UMP/GDPR message</h4>
+								<p>
+									The first step we must take is to create the consent message in the AdMob
+									interface. If you already have this message created then simply skip this step
+								</p>
+
+								<p>
+									If you prefer video tutorial refer to this video from 1:13 to 2:39.
+									<br />
+									<iframe
+										class="border rounded-lg"
+										width="560"
+										height="315"
+										src="https://www.youtube-nocookie.com/embed/6qApJmvQEGk?si=EDjgbEcHDLS0OVFm&amp;start=73"
+										title="YouTube video player"
+										frameborder="0"
+										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+										referrerpolicy="strict-origin-when-cross-origin"
+										allowfullscreen></iframe>
+									<br />
+								</p>
+
+								<strong><p>Steps:</p></strong>
+								<p>
+									Access the <a href="https://apps.admob.com/">AdMob console</a>, and go to the
+									<strong>Privacy & messaging</strong> section
+								</p>
+								<p>
+									Here you will see the different types of messages that you can create. Press the
+									first button at the bottom right to create your message
+								</p>
+								<img src="../images/app/gdpr_message.avif" style="max-width: 316px" />
+								<p>
+									In the next screen, press the Create message button to start creating your
+									message.
+								</p>
+								<p>You will be presented with a form with several options. Choose your app.</p>
+								<p>
+									Then choose the languages in which you want to display the message, and the
+									consent options:
+								</p>
+								<img src="../images/app/gdpr_message_type.avif" style="max-width: 316px" />
+								<p>
+									If you have doubts about which option is right for you, you should consult with a
+									lawyer specialized in this topic.
+								</p>
+								<p>
+									The last step will be to choose whether we want to show this message only in
+									regions subject to the GDPR or worldwide.
+								</p>
+								<p>
+									Once created you will be able to view and configure your message. At this point,
+									you can navigate through the interface since there are several configuration
+									options, including the selection of colors, languages, spacing, etc. Simply
+									configure the message to your liking so that it looks good in your application.
+								</p>
+								<p>
+									If you have more questions about the process of creating the privacy message, I
+									recommend that you look at the
+									<a href="https://support.google.com/admob/answer/10113207"
+										>Official AdMob Guide</a
+									>
+								</p>
+								<hr />
 							</section>
 
 							<section id="howToChangeIntroSlideImages">
