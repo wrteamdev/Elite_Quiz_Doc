@@ -197,17 +197,21 @@
                                     <li>How to setup Web Version</li>
                                 </h4>
 
-                                <ol>
-                                    <li>Install Node JS : </li>
-                                    Visit Node JS Official website :
-                                    <a href="https://nodejs.dev/en/learn/how-to-install-nodejs/" target="_blank">https://nodejs.dev/en/learn/how-to-install-nodejs/</a>
-                                    for full installation guide.
+                                <div class="info">
+                                    <span class="info-icon"><i class="fas fa-info-circle" style="color: #74C0FC;"></i></span>
+                                    <p class="mb-0">You must install version 16.8 or later. You can follow the documentation which suits your device.</p>
+                                  </div>
 
-                                    <br>
-                                    <br>
+                                    <div class="tip_box">
+                                        <div class="main_title">
+                                           <span class="warning_icon"><i class="fas fa-lightbulb"></i> TIP</span>
+                                           <h6>  Recommended link is here -</h6>
+                                        </div>
+                                        <span> <a href="https://nodejs.org/en/download" target="_blank" rel="noopener noreferrer">https://nodejs.org/en/download</a></span>
+                                     </div>
                                     <!-- If you prefer video tutorials, we recommend this playlist for the full installation process <br>
                                     <a href="https://www.youtube.com/playlist?list=PLSzsOkUDsvdtl3Pw48-R8lcK2oYkk40cm">https://www.youtube.com/playlist?list=PLSzsOkUDsvdtl3Pw48-R8lcK2oYkk40cm</a> -->
-                                </ol>
+                   
                                 <hr>
                             </section>
 
@@ -252,9 +256,16 @@
                             </section>
 
                             <section id="howToIntegrateFirebase">
-                                ------------------------------
-                                <h5 style="color: red;">Note:- <strong style="color: black;">If you already have purchased the App version of Elite Quiz and already created firebase project at that time then you can skip 4.1 step</h5></strong>
-                                ------------------------------
+                                <div class="warning_box" style="margin-top: 20px; margin-bottom: 20px;">
+                                    <div class="main_title">
+                                       <span class="warning_icon"><i class="fas fa-exclamation-triangle"></i> Note</span>
+                                    
+                                    </div>
+                                    <b>If you already have purchased the App version of Elite Quiz and already created firebase project at that time then you can skip 4.1 step</b>
+                                 </div>
+
+                                
+                              
                                 <h4>
                                     <li>How to configure firebase configuration and authorised domain add.</li>
                                 </h4>
@@ -305,12 +316,12 @@
                                         <img src="../images/web/addFirebaseAuth.png" alt="Elite Quiz" />
 
                                     </li>
-                                    <li>If your are using google sign-in you need to enable OAuth APIs that you want to
+                                    <!-- <li>If your are using google sign-in you need to enable OAuth APIs that you want to
                                         use using
                                         https://console.developers.google.com/ .Enable people api and make sure you've
                                         filled out all required fields in the console for OAuth consent screen.
                                         Otherwise, you may encounter APIException errors.
-                                    </li>
+                                    </li> -->
 
                                     <li> After that Add your domain name without https:// OR http:// e.g <b>elitequiz.wrteam.in</b>
                                         <img src="../images/web/addFirebaseAuth2.png" alt="Elite Quiz" />
