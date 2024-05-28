@@ -218,8 +218,11 @@
 							</p>
 							<p>
 								<span class="badge badge-primary text-uppercase mr-2">new</span>
-								Share your suggestions and areas for improvement through a
-								<a href="https://forms.gle/ozvDBsMiyvN1asK69">google form here</a>
+								Share your bug reports, suggestions and areas for improvement, or engage in
+								discussion through a
+								<a href="https://github.com/wrteam-jay/Elite-Quiz-Issues-Tracker"
+									>Github Issue Tracker here</a
+								>
 							</p>
 							<br />
 							<hr />
@@ -1138,10 +1141,56 @@ service cloud.firestore {
 										<img src="../images/app/in-app-purchase-3.webp" />
 									</li>
 								</ul>
-								<h6>To Enable Remove Ads feature</h6>
+								<h6>
+									Then you will need to do some further configuration for both android and ios, so
+									that IAP purchases can be verified from the server side.
+								</h6>
+								<strong>For Android</strong><br />
+								<ol>
+									<li>go to <code>Admin Panel > Settings > In App Settings</code></li>
+									<li>Add the Android App package name</li>
+									<li>and copy the Client Email</li>
+									<li>
+										Open Play Console and go to
+										<a href="https://play.google.com/console/u/0/developers/users-and-permissions"
+											>Users and Permissions</a
+										>
+										click Invite new Users
+									</li>
+									<li>
+										Paste the email into the Email Address field and for Account Permission give it
+										<strong>Admin</strong> permission. as shown in the image.
+										<img src="../images/app/play_console_add_iap_client_email.webp" />
+									</li>
+								</ol>
+
+								<strong>For IOS</strong>
+								<ol>
+									<li>
+										Go to <a href="https://appstoreconnect.apple.com/apps">App Store Connect</a> and
+										choose your app
+									</li>
+									<li>Select "App Information" from the left side menu</li>
+									<li>Click "Manage" under App-Specific Shared Secret</li>
+									<img src="../images/app/app_store_manage_shared_secrets.webp" />
+									<li>Click Generate and Copy the shared secret</li>
+									<li>
+										Paste the copied shared secret in the admin panel in "iTunes Shared Secret"
+									</li>
+									<img src="../images/app/in_app_settings.webp" />
+								</ol>
+
+								<br />
+								<h5>To Enable Remove Ads feature</h5>
 								<ol>
 									<li>
 										Create an product with product id of <code>remove_ads</code> in the admin panel
+										and select its Type to be of Ads. You can use any other product_id but remember
+										to add it in every other places as well.
+										<img src="../images/app/create_remove_ads_iap.webp" />
+										<span class="badge badge-danger text-uppercase mr-2">Important</span>
+										if you are updating from 2.1.8 version, then after updating you will need to
+										edit the remove ads iap and select its type to be Ads.
 									</li>
 									<li>
 										Then Create an <strong>Consumable</strong> Product in the App Store/Play Console
