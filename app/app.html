@@ -91,11 +91,6 @@
 										Connect Your Admin Panel to the App
 									</a>
 								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#notification-management">
-										Enable Notifications for App
-									</a>
-								</li>
 							</ul>
 						</li>
 						<li class="nav-item">
@@ -266,7 +261,7 @@
 										</p>
 										<p>
 											<span class="badge badge-danger text-uppercase mr-2">important</span>
-											Supported PHP versions are 7.4 to 8.1.
+											Supported PHP version should be greater than or equal to 8.1.
 										</p>
 									</li>
 									<li>
@@ -387,7 +382,7 @@
 								<h4>Setup flutter</h4>
 								<p>
 									<span class="badge badge-danger text-uppercase mr-2">important</span>
-									Install the current supported <strong>Flutter v3.19.6 (Latest)</strong> from the
+									Install the current supported <strong>Flutter v3.22.1 (Latest)</strong> from the
 									<strong>Stable channel</strong>.
 								</p>
 								<p>
@@ -701,26 +696,6 @@ service cloud.firestore {
 								</ol>
 								<hr />
 							</section>
-							<section id="notification-management">
-								<h4>Enable Notifications for App</h4>
-								<p>
-									Access your Firebase project and locate "Project Settings" > "Cloud Messaging" as
-									shown in the image.
-								</p>
-								<img src="../images/panel/go_to_googlecloud.webp" />
-								<br />
-								<br />
-								<p>Then, enable Cloud Messaging in Google Cloud.</p>
-								<img src="../images/panel/enable_cloud_messaging.webp" />
-								<p>
-									Comeback to firebase project, copy the Server Key, and paste it under "Settings" >
-									"Notification Settings"
-								</p>
-								<img src="../images/panel/notification-setting.webp" />
-								<hr />
-							</section>
-						</section>
-
 						<section id="modify_app">
 							<section id="howToChangeAppVersion">
 								<h4>Change application version and app launcher icon</h4>
