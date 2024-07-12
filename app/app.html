@@ -382,7 +382,7 @@
 								<h4>Setup flutter</h4>
 								<p>
 									<span class="badge badge-danger text-uppercase mr-2">important</span>
-									Install the current supported <strong>Flutter v3.22.1 (Latest)</strong> from the
+									Install the current supported <strong>Flutter v3.22.2 (Latest)</strong> from the
 									<strong>Stable channel</strong>.
 								</p>
 								<p>
@@ -696,1090 +696,1137 @@ service cloud.firestore {
 								</ol>
 								<hr />
 							</section>
-						<section id="modify_app">
-							<section id="howToChangeAppVersion">
-								<h4>Change application version and app launcher icon</h4>
-								<li>
-									Go to
-									<code>pubspec.yaml</code>
-									Update the
-									<code>version:A.B.C+X</code>
-									as shown in image below.
-								</li>
-								<span class="badge badge-danger text-uppercase mr-2">Important</span>
-								Make sure to execute
-								<code>flutter packages get</code>
-								or
-								<code>flutter build</code>
-								or
-								<code>flutter run</code>
-								after changing the version. <br />
-								<img src="../images/app/change_app_version.webp" />
-								<p>
-									You can start from <code>1.0.0+1</code> version, then as you update the app you
-									can update version also. you can follow semantic versioning or simply increase the
-									build number, its upto you.
-								</p>
-								<hr />
-							</section>
+							<section id="modify_app">
+								<section id="howToChangeAppVersion">
+									<h4>Change application version and app launcher icon</h4>
+									<li>
+										Go to
+										<code>pubspec.yaml</code>
+										Update the
+										<code>version:A.B.C+X</code>
+										as shown in image below.
+									</li>
+									<span class="badge badge-danger text-uppercase mr-2">Important</span>
+									Make sure to execute
+									<code>flutter packages get</code>
+									or
+									<code>flutter build</code>
+									or
+									<code>flutter run</code>
+									after changing the version. <br />
+									<img src="../images/app/change_app_version.webp" />
+									<p>
+										You can start from <code>1.0.0+1</code> version, then as you update the app you
+										can update version also. you can follow semantic versioning or simply increase
+										the build number, its upto you.
+									</p>
+									<hr />
+								</section>
 
-							<section id="howToChangeSplashAndAuthAppLogo">
-								<h4>Change Splash and Organization Logo</h4>
-								<img
-									class="img-fluid border rounded-lg"
-									style="max-width: 216px"
-									src="../images/app/change_splash_and_org_logo.webp" />
-								<p>
-									To change the splash and Organization logo, you can replace svg logo files called
-									<code>splash_logo.svg</code> & <code>org_logo.svg</code>. and if you are using png
-									images then you will have to add them in <code>assets/images</code> and change its
-									name from .svg to .png or .jpg
-									<code>lib/utils/constants/assets_constants.dart</code>
-									<img src="../images/app/change_splash_and_org_logo_extension.webp" />
-								</p>
-								<h4>Change Authentication Screen App Logo</h4>
-								<img
-									class="img-fluid border rounded-lg"
-									style="max-width: 216px"
-									src="../images/app/change_app_logo.webp" />
-								<p>
-									Similarly, you can replace <code>app_logo.svg</code> in assets/images and/or
-									change the extension by changing it in <code>assets_constants.dart</code> file
-								</p>
-								<img src="../images/app/change_app_logo_extension.webp" />
-							</section>
-
-							<section id="howToChangeAppLogo">
-								<h4>Change App Logo</h4>
-								<ol>
-									<li>
-										<strong>For Android</strong>
-										, open android > app > src > main > res and add here your logo according to
-										device screen size
-										<img src="../images/app/androidAppIcon.webp" />
-									</li>
-									<li>
-										<strong>For IOS open</strong>
-										, ios > Runner > Assets.xcassets > AppIcon.appiconset here and add your logo
-										according to diffrent size.
-										<img src="../images/app/iosAppIcon.webp" />
-									</li>
-								</ol>
-								<hr />
-							</section>
-
-							<section id="howToSetDefaultLanguage">
-								<h4>Set app's default language</h4>
-								<ol>
-									<li>
-										The App's default language is English, but you can easily modify it. To do so,
-										navigate to the
-										<code>lib/utils/constants/constants.dart</code>
-										file and locate the section displaying the language codes, as illustrated in the
-										image below.
-										<br />
-										<p>
-											<span class="badge badge-danger text-uppercase mr-2">note</span>
-											You can obtain your desired language code from the following
-											<a href="https://developers.google.com/admin-sdk/directory/v1/languages">
-												link</a
-											>. Just ensure that the language code you select is available in the
-											aforementioned link for proper functionality.
-										</p>
-										<img src="../images/app/changeDefaultLanguage.webp" />
-									</li>
-									<li>
-										If your desired language code is not in supported languages list, add language
-										code in list as shown in below image.
-										<img src="../images/app/addDefaultLanguage.webp" />
-									</li>
-									<li>
-										create a
-										<code>[language-code].json</code>
-										file in
-										<code>assets/languages/</code>
-										if your desired language is not available. Copy all labels from en.json and
-										translate the values accordingly.
-										<img src="../images/app/addNewLanguage.webp" />
-									</li>
-								</ol>
-								<br />
-								<hr />
-							</section>
-
-							<section id="howToAddLanguage">
-								<h4>Add new app language from admin panel</h4>
-								<ol>
-									<li>
-										Enable language mode in your admin panel as shown in the image below
-										<img src="../images/app/admin-language-1.webp" />
-									</li>
-									<li>
-										Go to languages section and select the language you want to from the drop down.
-										<img src="../images/app/admin-language-2.webp" />
-									</li>
-									<li>
-										Also Add this language code in supported languages list in your app code.
-										<img src="../images/app/addDefaultLanguage.webp" />
-									</li>
-									<li>
-										create a <code>[language-code].json</code> file in
-										<code>assets/languages/</code> if your desired language is not available. Copy
-										all labels from en.json and translate the values accordingly.
-										<img src="../images/app/addNewLanguage.webp" />
-									</li>
-								</ol>
-								<hr />
-							</section>
-
-							<section id="howToChangeAppColors">
-								<h4>Change app colors</h4>
-								You can change colors of the app from <code>lib/ui/styles/colors.dart</code>.
-								<img src="../images/app/change_colors.webp" />
-								<hr />
-							</section>
-
-							<section id="howToConfigureAds">
-								<h4>Configure Ads</h4>
-								<h5>Google AdMob</h5>
-								<p>
-									To begin, create an <a href="https://apps.admob.com">AdMob</a> account and set up
-									three Ad Units:
-								</p>
-								<ol>
-									<li>Banner Ad</li>
-									<li>Interstitial Ad</li>
-									<li>Rewarded Ad</li>
-								</ol>
-								Find your app ID here:
-								<a href="https://support.google.com/admob/answer/7356431?hl=en">
-									https://support.google.com/admob/answer/7356431?hl=en </a
-								>.
-								<ol>
-									<li>
-										For <strong>Android</strong>, go to
-										<code>android/app/src/main/AndroidManifest.xml</code> and enter android App Id
-										as shown in below image.
-										<br />
-										<img src="../images/app/google-ads-1.webp" />
-									</li>
-									<li>
-										For <strong>IOS</strong>, go to <code>ios/Runner/Info.plist</code> and enter IOS
-										App Id as shown in below image.
-										<br />
-										<img src="../images/app/google-ads-2.webp" />
-									</li>
-									<li>
-										Go to <code>Settings > Ads.Settings</code> in admin panel and add AdMob ad ids
-										as shown in below image.
-										<img src="../images/app/add-googe-ad-ids.webp" />
-									</li>
-								</ol>
-								<h5>Unity Ads</h5>
-								Go to
-								<code>Settings > Ads.Settings</code>
-								in admin panel and add Unity ad ids as shown in below image.
-								<img src="../images/app/add-unity-ad-ids.webp" />
-
-								<h5>Daily Watch Ads</h5>
-								<p>
-									Daily Watch Ads are Reward Ads shown to user in home screen. Users can choose to
-									watch ads to earn some coins. for daily watch ads you can limit how many time a
-									day user can watch ad to earn coin. and how much coin will they get per ad.
-								</p>
-								<center>
+								<section id="howToChangeSplashAndAuthAppLogo">
+									<h4>Change Splash and Organization Logo</h4>
 									<img
 										class="img-fluid border rounded-lg"
 										style="max-width: 216px"
-										src="../images/app/mobile_daily_ads_example.webp" />
-								</center>
-								<p>And you can change settings for it from <code>Ads Settings</code></p>
-								<img src="../images/app/daily_watch_ads_settings.webp" />
+										src="../images/app/change_splash_and_org_logo.webp" />
+									<p>
+										To change the splash and Organization logo, you can replace svg logo files
+										called
+										<code>splash_logo.svg</code> & <code>org_logo.svg</code>. and if you are using
+										png images then you will have to add them in <code>assets/images</code> and
+										change its name from .svg to .png or .jpg
+										<code>lib/utils/constants/assets_constants.dart</code>
+										<img src="../images/app/change_splash_and_org_logo_extension.webp" />
+									</p>
+									<h4>Change Authentication Screen App Logo</h4>
+									<img
+										class="img-fluid border rounded-lg"
+										style="max-width: 216px"
+										src="../images/app/change_app_logo.webp" />
+									<p>
+										Similarly, you can replace <code>app_logo.svg</code> in assets/images and/or
+										change the extension by changing it in <code>assets_constants.dart</code> file
+									</p>
+									<img src="../images/app/change_app_logo_extension.webp" />
+								</section>
 
-								<h5>Placements of the Ads</h5>
-								<p><strong>Banner Ads</strong></p>
-								<p>Banner Ads are shown screens which are mainly used to show list. like,</p>
-								<ul>
-									<li>Category List Screen</li>
-									<li>Sub Category List Screen</li>
-									<li>Levels List Screen</li>
-									<li>Sub Category & Levels List Screen</li>
-									<li>Exams List Screen</li>
-									<li>Fun'N'Learn List Screen</li>
-								</ul>
+								<section id="howToChangeAppLogo">
+									<h4>Change App Logo</h4>
+									<ol>
+										<li>
+											<strong>For Android</strong>
+											, open android > app > src > main > res and add here your logo according to
+											device screen size
+											<img src="../images/app/androidAppIcon.webp" />
+										</li>
+										<li>
+											<strong>For IOS open</strong>
+											, ios > Runner > Assets.xcassets > AppIcon.appiconset here and add your logo
+											according to diffrent size.
+											<img src="../images/app/iosAppIcon.webp" />
+										</li>
+									</ol>
+									<hr />
+								</section>
 
-								<p><strong>Interstitial Ads</strong></p>
-								<p>
-									Interstitial Ads are shown in places when user enters some section & before
-									showing result.
-								</p>
-								<ul>
-									<li>Before Showing Result Screen</li>
-									<li>
-										Going to sections from Menu Screen like, Notifications, Wallet, Statistics, etc
-									</li>
-									<li>before going to Categories List Screen</li>
-								</ul>
-
-								<p><strong>Reward Ads</strong></p>
-								<p>Rewards Ads are shown in only specific scenarios,</p>
-								<ul>
-									<li>
-										like when creating Battle Room if user doesn't have enough Coins. or when
-										playing Random Battle user doesn't have enough coins.
-									</li>
-									<li>
-										When playing quiz zone, if user doesn't have enough coins for using lifelines.
-										And similarly in Guess The Word when user tries to use hint without enough
-										coins.
-									</li>
-									<li>
-										Also in homescreen, user can opt in to watch Daily Ads to earn more coins by
-										watching video ads.
-									</li>
-								</ul>
-								<hr />
-							</section>
-
-							<section class="howToCreateUMPMessage">
-								<h4>Create the AdMob UMP/GDPR message</h4>
-								<p>
-									The first step we must take is to create the consent message in the AdMob
-									interface. If you already have this message created then simply skip this step
-								</p>
-
-								<p>
-									If you prefer video tutorial refer to this video from 1:13 to 2:39.
+								<section id="howToSetDefaultLanguage">
+									<h4>Set app's default language</h4>
+									<ol>
+										<li>
+											The App's default language is English, but you can easily modify it. To do so,
+											navigate to the
+											<code>lib/utils/constants/constants.dart</code>
+											file and locate the section displaying the language codes, as illustrated in
+											the image below.
+											<br />
+											<p>
+												<span class="badge badge-danger text-uppercase mr-2">note</span>
+												You can obtain your desired language code from the following
+												<a href="https://developers.google.com/admin-sdk/directory/v1/languages">
+													link</a
+												>. Just ensure that the language code you select is available in the
+												aforementioned link for proper functionality.
+											</p>
+											<img src="../images/app/changeDefaultLanguage.webp" />
+										</li>
+										<li>
+											If your desired language code is not in supported languages list, add language
+											code in list as shown in below image.
+											<img src="../images/app/addDefaultLanguage.webp" />
+										</li>
+										<li>
+											create a
+											<code>[language-code].json</code>
+											file in
+											<code>assets/languages/</code>
+											if your desired language is not available. Copy all labels from en.json and
+											translate the values accordingly.
+											<img src="../images/app/addNewLanguage.webp" />
+										</li>
+									</ol>
 									<br />
-									<iframe
-										class="border rounded-lg"
-										width="560"
-										height="315"
-										src="https://www.youtube-nocookie.com/embed/6qApJmvQEGk?si=EDjgbEcHDLS0OVFm&amp;start=73"
-										title="YouTube video player"
-										frameborder="0"
-										allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-										referrerpolicy="strict-origin-when-cross-origin"
-										allowfullscreen></iframe>
-									<br />
-								</p>
+									<hr />
+								</section>
 
-								<strong><p>Steps:</p></strong>
-								<p>
-									Access the <a href="https://apps.admob.com/">AdMob console</a>, and go to the
-									<strong>Privacy & messaging</strong> section
-								</p>
-								<p>
-									Here you will see the different types of messages that you can create. Press the
-									first button at the bottom right to create your message
-								</p>
-								<img src="../images/app/gdpr_message.avif" style="max-width: 316px" />
-								<p>
-									In the next screen, press the Create message button to start creating your
-									message.
-								</p>
-								<p>You will be presented with a form with several options. Choose your app.</p>
-								<p>
-									Then choose the languages in which you want to display the message, and the
-									consent options:
-								</p>
-								<img src="../images/app/gdpr_message_type.avif" style="max-width: 316px" />
-								<p>
-									If you have doubts about which option is right for you, you should consult with a
-									lawyer specialized in this topic.
-								</p>
-								<p>
-									The last step will be to choose whether we want to show this message only in
-									regions subject to the GDPR or worldwide.
-								</p>
-								<p>
-									Once created you will be able to view and configure your message. At this point,
-									you can navigate through the interface since there are several configuration
-									options, including the selection of colors, languages, spacing, etc. Simply
-									configure the message to your liking so that it looks good in your application.
-								</p>
-								<p>
-									If you have more questions about the process of creating the privacy message, I
-									recommend that you look at the
-									<a href="https://support.google.com/admob/answer/10113207"
-										>Official AdMob Guide</a
-									>
-								</p>
-								<hr />
-							</section>
+								<section id="howToAddLanguage">
+									<h4>Add new app language from admin panel</h4>
+									<ol>
+										<li>
+											Enable language mode in your admin panel as shown in the image below
+											<img src="../images/app/admin-language-1.webp" />
+										</li>
+										<li>
+											Go to languages section and select the language you want to from the drop
+											down.
+											<img src="../images/app/admin-language-2.webp" />
+										</li>
+										<li>
+											Also Add this language code in supported languages list in your app code.
+											<img src="../images/app/addDefaultLanguage.webp" />
+										</li>
+										<li>
+											create a <code>[language-code].json</code> file in
+											<code>assets/languages/</code> if your desired language is not available. Copy
+											all labels from en.json and translate the values accordingly.
+											<img src="../images/app/addNewLanguage.webp" />
+										</li>
+									</ol>
+									<hr />
+								</section>
 
-							<section id="howToChangeIntroSlideImages">
-								<h4>Change intro slider images</h4>
-								<li>
-									Update SVGs in
-									<code>assets/images</code>
-									folder using the same filenames shown in the images.
-									<img src="../images/app/onboarding_assets.webp" />
-								</li>
-								<li>
-									You can add/remove onboarding details from
-									<code>lib/ui/screens/onboarding_screen.dart</code>
-									<img src="../images/app/update_onboarding_assets.webp" />
-								</li>
-								<hr />
-							</section>
+								<section id="howToChangeAppColors">
+									<h4>Change app colors</h4>
+									You can change colors of the app from <code>lib/ui/styles/colors.dart</code>.
+									<img src="../images/app/change_colors.webp" />
+									<hr />
+								</section>
 
-							<section id="howToChangeDefaultProfileImages">
-								<h4>Change default profile avatar images</h4>
-								<ol>
-									<li>
-										Update Avatars in
-										<code>assets/images/profile</code>
-										folder using the same filenames preferably shown in the images.
-										<img src="../images/app/profilePictures.webp" />
-									</li>
-									<li>
-										Then add those filenames in
-										<code>assets/files/defaultProfileImages.json</code>
-										file.
-										<img src="../images/app/profilePictures2.webp" />
-									</li>
-								</ol>
-								<hr />
-							</section>
+								<section id="howToConfigureAds">
+									<h4>Configure Ads</h4>
+									<h5>Google AdMob</h5>
+									<p>
+										To begin, create an <a href="https://apps.admob.com">AdMob</a> account and set
+										up three Ad Units:
+									</p>
+									<ol>
+										<li>Banner Ad</li>
+										<li>Interstitial Ad</li>
+										<li>Rewarded Ad</li>
+									</ol>
+									Find your app ID here:
+									<a href="https://support.google.com/admob/answer/7356431?hl=en">
+										https://support.google.com/admob/answer/7356431?hl=en </a
+									>.
+									<ol>
+										<li>
+											For <strong>Android</strong>, go to
+											<code>android/app/src/main/AndroidManifest.xml</code> and enter android App Id
+											as shown in below image.
+											<br />
+											<img src="../images/app/google-ads-1.webp" />
+										</li>
+										<li>
+											For <strong>IOS</strong>, go to <code>ios/Runner/Info.plist</code> and enter
+											IOS App Id as shown in below image.
+											<br />
+											<img src="../images/app/google-ads-2.webp" />
+										</li>
+										<li>
+											Go to <code>Settings > Ads.Settings</code> in admin panel and add AdMob ad ids
+											as shown in below image.
+											<img src="../images/app/add-googe-ad-ids.webp" />
+										</li>
+									</ol>
+									<h5>Unity Ads</h5>
+									Go to
+									<code>Settings > Ads.Settings</code>
+									in admin panel and add Unity ad ids as shown in below image.
+									<img src="../images/app/add-unity-ad-ids.webp" />
 
-							<section id="howToConfigureInAppPurchase">
-								<h4>Configure In-App purchases</h4>
-								<p>
-									For In App Products to show up in the app, first you will need to at least publish
-									the app in closed or internal testing, and create products in app store and/or
-									play console. then create the same products with same product_id in admin panel.
-									remember product_id should be same in admin panel products and app store/play
-									console.
-								</p>
-								<p>
-									Once you have created IAP(In-App-Purchase) Products in app store/play console and
-									in admin panel and published the app in closed/internal testing. verify that it is
-									showing up in the app.
-								</p>
-								<p>
-									Follow the below given resources for creating IAP in app store / play console. and
-									in admin panel
-								</p>
-								<p>
-									For creating in-app purchase products refer to the documentation here:
-									<a href="https://developer.apple.com/in-app-purchase/">Apple</a>,
-									<a
-										href="https://support.google.com/googleplay/android-developer/answer/1153481?hl=en#zippy=%2Ccreate-a-single-in-app-product/">
-										Google</a
-									>
-								</p>
-								<h5>For android (Play Store)</h5>
-								<ul>
-									<li>
-										Upload your application to the Play Store and create in-app products as shown in
-										the image. Ensure that the ID of consumable products in both Apple and Play
-										Store is the same.
+									<h5>Daily Watch Ads</h5>
+									<p>
+										Daily Watch Ads are Reward Ads shown to user in home screen. Users can choose to
+										watch ads to earn some coins. for daily watch ads you can limit how many time a
+										day user can watch ad to earn coin. and how much coin will they get per ad.
+									</p>
+									<center>
+										<img
+											class="img-fluid border rounded-lg"
+											style="max-width: 216px"
+											src="../images/app/mobile_daily_ads_example.webp" />
+									</center>
+									<p>And you can change settings for it from <code>Ads Settings</code></p>
+									<img src="../images/app/daily_watch_ads_settings.webp" />
+
+									<h5>Placements of the Ads</h5>
+									<p><strong>Banner Ads</strong></p>
+									<p>Banner Ads are shown screens which are mainly used to show list. like,</p>
+									<ul>
+										<li>Category List Screen</li>
+										<li>Sub Category List Screen</li>
+										<li>Levels List Screen</li>
+										<li>Sub Category & Levels List Screen</li>
+										<li>Exams List Screen</li>
+										<li>Fun'N'Learn List Screen</li>
+									</ul>
+
+									<p><strong>Interstitial Ads</strong></p>
+									<p>
+										Interstitial Ads are shown in places when user enters some section & before
+										showing result.
+									</p>
+									<ul>
+										<li>Before Showing Result Screen</li>
+										<li>
+											Going to sections from Menu Screen like, Notifications, Wallet, Statistics,
+											etc
+										</li>
+										<li>before going to Categories List Screen</li>
+									</ul>
+
+									<p><strong>Reward Ads</strong></p>
+									<p>Rewards Ads are shown in only specific scenarios,</p>
+									<ul>
+										<li>
+											like when creating Battle Room if user doesn't have enough Coins. or when
+											playing Random Battle user doesn't have enough coins.
+										</li>
+										<li>
+											When playing quiz zone, if user doesn't have enough coins for using lifelines.
+											And similarly in Guess The Word when user tries to use hint without enough
+											coins.
+										</li>
+										<li>
+											Also in homescreen, user can opt in to watch Daily Ads to earn more coins by
+											watching video ads.
+										</li>
+									</ul>
+									<hr />
+								</section>
+
+								<section class="howToCreateUMPMessage">
+									<h4>Create the AdMob UMP/GDPR message</h4>
+									<p>
+										The first step we must take is to create the consent message in the AdMob
+										interface. If you already have this message created then simply skip this step
+									</p>
+
+									<p>
+										If you prefer video tutorial refer to this video from 1:13 to 2:39.
 										<br />
-										<img src="../images/app/in-app-purchase-1.webp" />
-									</li>
-								</ul>
-								<h5>For IOS (App Store)</h5>
-								<ul>
-									<li>
-										Open the
-										<code>ios</code>
-										folder of the project into Xcode. Go to Capabilities. And enable "In-App
-										Purchase" as shown in image.
-										<img src="../images/app/in-app-purchase-2.webp" />
-									</li>
-									<li>
-										use the following links to get help enabling in-app purchases:
+										<iframe
+											class="border rounded-lg"
+											width="560"
+											height="315"
+											src="https://www.youtube-nocookie.com/embed/6qApJmvQEGk?si=EDjgbEcHDLS0OVFm&amp;start=73"
+											title="YouTube video player"
+											frameborder="0"
+											allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+											referrerpolicy="strict-origin-when-cross-origin"
+											allowfullscreen></iframe>
 										<br />
-										<a href="https://help.apple.com/app-store-connect/#/devae49fb316">
-											https://help.apple.com/app-store-connect/#/devae49fb316
-										</a>
-										<br />
-										<a href="https://help.apple.com/app-store-connect/#/devb57be10e7">
-											https://help.apple.com/app-store-connect/#/devb57be10e7
-										</a>
-										<br />
-										For further assistance, refer to the official Apple Developer documentation on
-										in-app purchases at:
-										<a href="https://developer.apple.com/in-app-purchase/">
-											https://developer.apple.com/in-app-purchase/
-										</a>
-									</li>
-								</ul>
-								<h5>Add In-App products from Admin Panel</h5>
-								<ul>
-									<li>
-										Then After creating in-app purchase products, add their respective coins and
-										productIds in
-										<code>Admin Panel > Settings > Coin Store Settings</code>
-										as shown in image.
-										<img src="../images/app/in-app-purchase-3.webp" />
-									</li>
-								</ul>
-								<h6>
-									Then you will need to do some further configuration for both android and ios, so
-									that IAP purchases can be verified from the server side.
-								</h6>
-								<strong>For Android</strong><br />
-								<ol>
-									<li>go to <code>Admin Panel > Settings > In App Settings</code></li>
-									<li>Add the Android App package name</li>
-									<li>and copy the Client Email</li>
-									<li>
-										Open Play Console and go to
-										<a href="https://play.google.com/console/u/0/developers/users-and-permissions"
-											>Users and Permissions</a
+									</p>
+
+									<strong><p>Steps:</p></strong>
+									<p>
+										Access the <a href="https://apps.admob.com/">AdMob console</a>, and go to the
+										<strong>Privacy & messaging</strong> section
+									</p>
+									<p>
+										Here you will see the different types of messages that you can create. Press the
+										first button at the bottom right to create your message
+									</p>
+									<img src="../images/app/gdpr_message.avif" style="max-width: 316px" />
+									<p>
+										In the next screen, press the Create message button to start creating your
+										message.
+									</p>
+									<p>You will be presented with a form with several options. Choose your app.</p>
+									<p>
+										Then choose the languages in which you want to display the message, and the
+										consent options:
+									</p>
+									<img src="../images/app/gdpr_message_type.avif" style="max-width: 316px" />
+									<p>
+										If you have doubts about which option is right for you, you should consult with
+										a lawyer specialized in this topic.
+									</p>
+									<p>
+										The last step will be to choose whether we want to show this message only in
+										regions subject to the GDPR or worldwide.
+									</p>
+									<p>
+										Once created you will be able to view and configure your message. At this point,
+										you can navigate through the interface since there are several configuration
+										options, including the selection of colors, languages, spacing, etc. Simply
+										configure the message to your liking so that it looks good in your application.
+									</p>
+									<p>
+										If you have more questions about the process of creating the privacy message, I
+										recommend that you look at the
+										<a href="https://support.google.com/admob/answer/10113207"
+											>Official AdMob Guide</a
 										>
-										click Invite new Users
-									</li>
-									<li>
-										Paste the email into the Email Address field and for Account Permission give it
-										<strong>Admin</strong> permission. as shown in the image.
-										<img src="../images/app/play_console_add_iap_client_email.webp" />
-									</li>
-								</ol>
+									</p>
+									<hr />
+								</section>
 
-								<strong>For IOS</strong>
-								<ol>
+								<section id="howToChangeIntroSlideImages">
+									<h4>Change intro slider images</h4>
 									<li>
-										Go to <a href="https://appstoreconnect.apple.com/apps">App Store Connect</a> and
-										choose your app
+										Update SVGs in
+										<code>assets/images</code>
+										folder using the same filenames shown in the images.
+										<img src="../images/app/onboarding_assets.webp" />
 									</li>
-									<li>Select "App Information" from the left side menu</li>
-									<li>Click "Manage" under App-Specific Shared Secret</li>
-									<img src="../images/app/app_store_manage_shared_secrets.webp" />
-									<li>Click Generate and Copy the shared secret</li>
 									<li>
-										Paste the copied shared secret in the admin panel in "iTunes Shared Secret"
+										You can add/remove onboarding details from
+										<code>lib/ui/screens/onboarding_screen.dart</code>
+										<img src="../images/app/update_onboarding_assets.webp" />
 									</li>
-									<img src="../images/app/in_app_settings.webp" />
-								</ol>
+									<hr />
+								</section>
 
-								<br />
-								<h5>To Enable Remove Ads feature</h5>
-								<ol>
-									<li>
-										Create an product with product id of <code>remove_ads</code> in the admin panel
-										and select its Type to be of Ads. You can use any other product_id but remember
-										to add it in every other places as well.
-										<img src="../images/app/create_remove_ads_iap.webp" />
-										<span class="badge badge-danger text-uppercase mr-2">Important</span>
-										if you are updating from 2.1.8 version, then after updating you will need to
-										edit the remove ads iap and select its type to be Ads.
-									</li>
-									<li>
-										Then Create an <strong>Consumable</strong> Product in the App Store/Play Console
-										with the same product id (<code>remove_ads</code>)
-									</li>
-								</ol>
-								<br />
+								<section id="howToChangeDefaultProfileImages">
+									<h4>Change default profile avatar images</h4>
+									<ol>
+										<li>
+											Update Avatars in
+											<code>assets/images/profile</code>
+											folder using the same filenames preferably shown in the images.
+											<img src="../images/app/profilePictures.webp" />
+										</li>
+										<li>
+											Then add those filenames in
+											<code>assets/files/defaultProfileImages.json</code>
+											file.
+											<img src="../images/app/profilePictures2.webp" />
+										</li>
+									</ol>
+									<hr />
+								</section>
+
+								<section id="howToConfigureInAppPurchase">
+									<h4>Configure In-App purchases</h4>
+									<p>
+										For In App Products to show up in the app, first you will need to at least
+										publish the app in closed or internal testing, and create products in app store
+										and/or play console. then create the same products with same product_id in admin
+										panel. remember product_id should be same in admin panel products and app
+										store/play console.
+									</p>
+									<p>
+										Once you have created IAP(In-App-Purchase) Products in app store/play console
+										and in admin panel and published the app in closed/internal testing. verify that
+										it is showing up in the app.
+									</p>
+									<p>
+										Follow the below given resources for creating IAP in app store / play console.
+										and in admin panel
+									</p>
+									<p>
+										For creating in-app purchase products refer to the documentation here:
+										<a href="https://developer.apple.com/in-app-purchase/">Apple</a>,
+										<a
+											href="https://support.google.com/googleplay/android-developer/answer/1153481?hl=en#zippy=%2Ccreate-a-single-in-app-product/">
+											Google</a
+										>
+									</p>
+									<h5>For android (Play Store)</h5>
+									<ul>
+										<li>
+											Upload your application to the Play Store and create in-app products as shown
+											in the image. Ensure that the ID of consumable products in both Apple and Play
+											Store is the same.
+											<br />
+											<img src="../images/app/in-app-purchase-1.webp" />
+										</li>
+									</ul>
+									<h5>For IOS (App Store)</h5>
+									<ul>
+										<li>
+											Open the
+											<code>ios</code>
+											folder of the project into Xcode. Go to Capabilities. And enable "In-App
+											Purchase" as shown in image.
+											<img src="../images/app/in-app-purchase-2.webp" />
+										</li>
+										<li>
+											use the following links to get help enabling in-app purchases:
+											<br />
+											<a href="https://help.apple.com/app-store-connect/#/devae49fb316">
+												https://help.apple.com/app-store-connect/#/devae49fb316
+											</a>
+											<br />
+											<a href="https://help.apple.com/app-store-connect/#/devb57be10e7">
+												https://help.apple.com/app-store-connect/#/devb57be10e7
+											</a>
+											<br />
+											For further assistance, refer to the official Apple Developer documentation on
+											in-app purchases at:
+											<a href="https://developer.apple.com/in-app-purchase/">
+												https://developer.apple.com/in-app-purchase/
+											</a>
+										</li>
+									</ul>
+									<h5>Add In-App products from Admin Panel</h5>
+									<ul>
+										<li>
+											Then After creating in-app purchase products, add their respective coins and
+											productIds in
+											<code>Admin Panel > Settings > Coin Store Settings</code>
+											as shown in image.
+											<img src="../images/app/in-app-purchase-3.webp" />
+										</li>
+									</ul>
+									<h6>
+										Then you will need to do some further configuration for both android and ios, so
+										that IAP purchases can be verified from the server side.
+									</h6>
+									<strong>For Android</strong><br />
+									<ol>
+										<li>go to <code>Admin Panel > Settings > In App Settings</code></li>
+										<li>Add the Android App package name</li>
+										<li>and copy the Client Email</li>
+										<li>
+											Open Play Console and go to
+											<a href="https://play.google.com/console/u/0/developers/users-and-permissions"
+												>Users and Permissions</a
+											>
+											click Invite new Users
+										</li>
+										<li>
+											Paste the email into the Email Address field and for Account Permission give
+											it
+											<strong>Admin</strong> permission. as shown in the image.
+											<img src="../images/app/play_console_add_iap_client_email.webp" />
+										</li>
+										<li>
+											Go to your
+											<a
+												href="https://console.cloud.google.com/marketplace/product/google/androidpublisher.googleapis.com"
+												>Google Console to Android Developer API page</a
+											>
+											and make sure your project is selected select your project from top dropdown.
+											make sure it is enabled. if not enable it.
+											<img
+												class="border rounded-lg"
+												src="../images/panel/google_console_verify_play_android_developer_api_is_enabled.webp" />
+										</li>
+									</ol>
+
+									<strong>For IOS</strong>
+									<ol>
+										<li>
+											Go to
+											<a href="https://appstoreconnect.apple.com/apps">App Store Connect</a> and
+											choose your app
+										</li>
+										<li>Select "App Information" from the left side menu</li>
+										<li>Click "Manage" under App-Specific Shared Secret</li>
+										<img src="../images/app/app_store_manage_shared_secrets.webp" />
+										<li>Click Generate and Copy the shared secret</li>
+										<li>
+											Paste the copied shared secret in the admin panel in "iTunes Shared Secret"
+										</li>
+										<img src="../images/app/in_app_settings.webp" />
+									</ol>
+
+									<br />
+									<h5>To Enable Remove Ads feature</h5>
+									<ol>
+										<li>
+											Create an product with product id of <code>remove_ads</code> in the admin
+											panel and select its Type to be of Ads. You can use any other product_id but
+											remember to add it in every other places as well.
+											<img src="../images/app/create_remove_ads_iap.webp" />
+											<span class="badge badge-danger text-uppercase mr-2">Important</span>
+											if you are updating from 2.1.8 version, then after updating you will need to
+											edit the remove ads iap and select its type to be Ads.
+										</li>
+										<li>
+											Then Create an <strong>Consumable</strong> Product in the App Store/Play
+											Console with the same product id (<code>remove_ads</code>)
+										</li>
+									</ol>
+									<br />
+									<hr />
+								</section>
+								<section id="modifyBattleMessages">
+									<h4>Modify battle messages & emojis</h4>
+									<ol>
+										<li>
+											From <code>lib/utils/constants/constants.dart</code> you can add/modify
+											<code>predefinedMessages</code> a list of predefined messages as per your
+											liking. <br />
+											<img src="../images/app/battle-message-4.webp" />
+										</li>
+										<li>
+											You can update the emojis from <code>assets/images/emojis/</code> . These
+											emojis must be SVGs. <img src="../images/app/battle-message-5.webp" />
+										</li>
+										<li>
+											Any additional emojis that you might have added you also need to add them in
+											<code>assets/files/emojis.json</code>
+											<img src="../images/app/battle-message-6.webp" />
+										</li>
+									</ol>
+									<br />
+									<hr />
+								</section>
+								<section id="howToConfigureForceUpdate">
+									<h4>Configure force update</h4>
+									You can require users to update to the latest app version by specifying it in the
+									Play/App Store. Upon opening the app, a pop-up will prompt them to update.
+									<ol>
+										<li>
+											To do that go to admin panel,
+											<code>Settings -> System Configurations</code>
+											and enable force update.
+											<br />
+											<img src="../images/app/force-update.webp" />
+										</li>
+										<li>
+											Go to pubspec.yaml and copy the version number of application.
+											<br />
+											<img src="../images/app/force-update-2.webp" />
+										</li>
+										<li>
+											Enter the version number that we just copied into, Android and Ios Version
+											fields.
+											<br />
+											<img src="../images/app/force-update-3.webp" />
+										</li>
+										<li>
+											Add the App Store & Play Store links to your app. And make sure that links are
+											correct, otherwise force update will not work as expected.
+											<br />
+											<img src="../images/app/force-update-4.webp" />
+										</li>
+									</ol>
+									<hr />
+								</section>
+								<section id="manageBadges">
+									<h4>Manage Badges</h4>
+									<ol>
+										<li>
+											Manage badges from here
+											<img src="../images/app/manage-badges.webp" />
+										</li>
+										<li>
+											To unlock badges like Super Sonic, Flashback and Brainiac minimum question is
+											set to 5.
+											<br />
+											You can change that as shown in below image.
+											<img src="../images/app/manage-badges-1.webp" />
+										</li>
+										<li>
+											To unlock badges like Combat Winner, Clash Winner and Quiz Warrior winner must
+											be declared by completing battle.
+											<br />
+										</li>
+										<li>
+											To get more information about how badges works
+											<a href="../files/badges.txt">click here</a>
+											.
+										</li>
+									</ol>
+									<hr />
+								</section>
+								<section id="howToSetupExamModule">
+									<h4>Setup Exams</h4>
+									<ol>
+										<li>
+											Go to admin panel, <code>Settings -> System Configurations</code> and enable
+											exam module as shown in image.
+											<br />
+											<img src="../images/app/exam-module-1.webp" />
+										</li>
+										<li>
+											If you want to update the exam rules you can do so by updating
+											<code>examRules</code>
+											in
+											<code>lib/utils/constants/constants.dart</code>
+											<br />
+											<img src="../images/app/exam-module-2.webp" />
+										</li>
+									</ol>
+									<hr />
+								</section>
+								<section id="howToSetupEarningModule">
+									<h4>Setup earning module</h4>
+									<ol>
+										<li>
+											To set up the earning module for users to redeem coins, access the Admin Panel
+											and go to <code>Settings -> Payment Settings</code>.
+											<br />
+											Users can convert earned coins to real money with customizable conversion
+											rates. For example here, per <code>10 Coins</code> user will get
+											<code>1 Amount</code>.
+											<br />
+											Amount here refers to the real money. And <code>Currency Symbol</code> will be
+											used for the amount.
+											<br />
+											<img src="../images/app/earning-module-1.webp" />
+										</li>
+										<li>
+											You can also modify the notes that will be shown to user when they redeem the
+											coins, and for that go to <code>lib/utils/constants/constants.dart</code>
+											<br />
+											<img src="../images/app/earning-module-2.webp" />
+										</li>
+										<li>
+											From there you also have the option to add or update payment methods.
+											<br />
+											These methods require manual approval by the <code>Admin</code> , who then
+											proceeds to send the actual funds to the users through their chosen payment
+											options specified in this section. <br />
+											<img src="../images/app/update_payment_methods.webp" />
+										</li>
+										<li>
+											<code>Admin</code>
+											can view and process payment requests in the
+											<code>Payment Requests</code>
+											section of their Admin Panel.
+											<br />
+											<img src="../images/app/earning-module-4.webp" />
+										</li>
+									</ol>
+									<br />
+									<hr />
+								</section>
+								<section id="howToSetupTimer">
+									<h4>Configure quiz timers, score and coins management</h4>
+									<img src="../images/panel/system_utilities.webp" />
+									<ul>
+										<li>
+											Maximum Winning Coins : The highest coins users can earn based on their
+											correct answers percentage in the quiz.
+										</li>
+										<li>
+											Minimum Winning Percentage: The minimum correct answers percentage needed to
+											earn
+											<code>Maximum Winning Coins</code>
+											.
+										</li>
+										<li>Quiz Winning Percentage : Percentage required to win the quiz</li>
+										<li>Score: Points awarded per correct answer.</li>
+										<li>Timer Settings : Customize quiz durations from here.</li>
+										<li>Welcome Bonus : coins received on initial login.</li>
+										<li>Lifeline Deduct : adjust coins needed for using lifeline.</li>
+										<li>Random Battle Entry : base entry fee for playing random battles.</li>
+										<li>Review Answers Deduct : coins deducted for reviewing quiz answers.</li>
+									</ul>
+									<br />
+									<hr />
+								</section>
+								<section id="howToAppConstants">
+									<h4>Change app constants</h4>
+									<ol>
+										<li>
+											In addition to modifying
+											<code>System Configurations</code>
+											and
+											<code>System Utilities</code>
+											, you have the option to make specific changes to certain application aspects
+											through the
+											<code>lib/utils/constants/constants.dart</code>
+											file.
+											<br />
+											<br />
+											These include altering Sound files, setting the
+											<code>initialSelectedCountryCode</code>
+											for the default country selection in the Phone login screen,
+											<br />
+											defining
+											<code>maxPhoneNumberLength</code>
+											to limit the phone number length based on your country, adjusting the wait
+											duration for opponents in battles, setting the in-between questions duration,
+											modifying the deduction for wrong answers, and configuring extra points for
+											the quickest answers, among other possibilities.
+											<img src="../images/app/changeOtherConstants.webp" />
+										</li>
+										<li>
+											To modify coin distribution, access
+											<code>lib/utils/ui_utils.dart</code>
+											and update the equation according to your preferences.
+											<img src="../images/app/coinsEquation.webp" />
+										</li>
+									</ol>
+									<br />
+									<hr />
+								</section>
+								<section id="howToGenerateReleaseVersion">
+									<h4>Generate release version of this product</h4>
+									To generate the release version of this application, please refer to the
+									platform-specific guides:
+									<a href="https://flutter.dev/docs/deployment/android">Android</a>
+									<a href="https://flutter.dev/docs/deployment/ios">IOS</a>
+									.
+									<br />
+									<strong>Important:</strong>
+									Before deploying to IOS, ensure that the "China" option is unchecked as
+									demonstrated in the image below.
+									<img src="../images/app/appAvailability.webp" />
+									<br />
+									<br />
+								</section>
 								<hr />
 							</section>
-							<section id="modifyBattleMessages">
-								<h4>Modify battle messages & emojis</h4>
-								<ol>
-									<li>
-										From <code>lib/utils/constants/constants.dart</code> you can add/modify
-										<code>predefinedMessages</code> a list of predefined messages as per your
-										liking. <br />
-										<img src="../images/app/battle-message-4.webp" />
-									</li>
-									<li>
-										You can update the emojis from <code>assets/images/emojis/</code> . These emojis
-										must be SVGs. <img src="../images/app/battle-message-5.webp" />
-									</li>
-									<li>
-										Any additional emojis that you might have added you also need to add them in
-										<code>assets/files/emojis.json</code>
-										<img src="../images/app/battle-message-6.webp" />
-									</li>
-								</ol>
-								<br />
-								<hr />
-							</section>
-							<section id="howToConfigureForceUpdate">
-								<h4>Configure force update</h4>
-								You can require users to update to the latest app version by specifying it in the
-								Play/App Store. Upon opening the app, a pop-up will prompt them to update.
-								<ol>
-									<li>
-										To do that go to admin panel,
-										<code>Settings -> System Configurations</code>
-										and enable force update.
-										<br />
-										<img src="../images/app/force-update.webp" />
-									</li>
-									<li>
-										Go to pubspec.yaml and copy the version number of application.
-										<br />
-										<img src="../images/app/force-update-2.webp" />
-									</li>
-									<li>
-										Enter the version number that we just copied into, Android and Ios Version
-										fields.
-										<br />
-										<img src="../images/app/force-update-3.webp" />
-									</li>
-									<li>
-										Add the App Store & Play Store links to your app. And make sure that links are
-										correct, otherwise force update will not work as expected.
-										<br />
-										<img src="../images/app/force-update-4.webp" />
-									</li>
-								</ol>
-								<hr />
-							</section>
-							<section id="manageBadges">
-								<h4>Manage Badges</h4>
-								<ol>
-									<li>
-										Manage badges from here
-										<img src="../images/app/manage-badges.webp" />
-									</li>
-									<li>
-										To unlock badges like Super Sonic, Flashback and Brainiac minimum question is
-										set to 5.
-										<br />
-										You can change that as shown in below image.
-										<img src="../images/app/manage-badges-1.webp" />
-									</li>
-									<li>
-										To unlock badges like Combat Winner, Clash Winner and Quiz Warrior winner must
-										be declared by completing battle.
-										<br />
-									</li>
-									<li>
-										To get more information about how badges works
-										<a href="../files/badges.txt">click here</a>
-										.
-									</li>
-								</ol>
-								<hr />
-							</section>
-							<section id="howToSetupExamModule">
-								<h4>Setup Exams</h4>
-								<ol>
-									<li>
-										Go to admin panel, <code>Settings -> System Configurations</code> and enable
-										exam module as shown in image.
-										<br />
-										<img src="../images/app/exam-module-1.webp" />
-									</li>
-									<li>
-										If you want to update the exam rules you can do so by updating
-										<code>examRules</code>
-										in
-										<code>lib/utils/constants/constants.dart</code>
-										<br />
-										<img src="../images/app/exam-module-2.webp" />
-									</li>
-								</ol>
-								<hr />
-							</section>
-							<section id="howToSetupEarningModule">
-								<h4>Setup earning module</h4>
-								<ol>
-									<li>
-										To set up the earning module for users to redeem coins, access the Admin Panel
-										and go to <code>Settings -> Payment Settings</code>.
-										<br />
-										Users can convert earned coins to real money with customizable conversion rates.
-										For example here, per <code>10 Coins</code> user will get <code>1 Amount</code>.
-										<br />
-										Amount here refers to the real money. And <code>Currency Symbol</code> will be
-										used for the amount.
-										<br />
-										<img src="../images/app/earning-module-1.webp" />
-									</li>
-									<li>
-										You can also modify the notes that will be shown to user when they redeem the
-										coins, and for that go to <code>lib/utils/constants/constants.dart</code>
-										<br />
-										<img src="../images/app/earning-module-2.webp" />
-									</li>
-									<li>
-										From there you also have the option to add or update payment methods.
-										<br />
-										These methods require manual approval by the <code>Admin</code> , who then
-										proceeds to send the actual funds to the users through their chosen payment
-										options specified in this section. <br />
-										<img src="../images/app/update_payment_methods.webp" />
-									</li>
-									<li>
-										<code>Admin</code>
-										can view and process payment requests in the
-										<code>Payment Requests</code>
-										section of their Admin Panel.
-										<br />
-										<img src="../images/app/earning-module-4.webp" />
-									</li>
-								</ol>
-								<br />
-								<hr />
-							</section>
-							<section id="howToSetupTimer">
-								<h4>Configure quiz timers, score and coins management</h4>
-								<img src="../images/panel/system_utilities.webp" />
+							<section id="sha-keys">
+								<h4>SHA keys and Keystore Basics</h4>
+								For Android build you need to understand few things.
 								<ul>
 									<li>
-										Maximum Winning Coins : The highest coins users can earn based on their correct
-										answers percentage in the quiz.
+										Basically Keystore file is used for signing your app. each keystore file having
+										SHA keys, which gets associated with your app.
 									</li>
 									<li>
-										Minimum Winning Percentage: The minimum correct answers percentage needed to
-										earn
-										<code>Maximum Winning Coins</code>
-										.
+										SHA keys are required for android version of the app's login and battles
+										functionalites to work.
 									</li>
-									<li>Quiz Winning Percentage : Percentage required to win the quiz</li>
-									<li>Score: Points awarded per correct answer.</li>
-									<li>Timer Settings : Customize quiz durations from here.</li>
-									<li>Welcome Bonus : coins received on initial login.</li>
-									<li>Lifeline Deduct : adjust coins needed for using lifeline.</li>
-									<li>Random Battle Entry : base entry fee for playing random battles.</li>
-									<li>Review Answers Deduct : coins deducted for reviewing quiz answers.</li>
+									<li>
+										Firstly, there are 2 keystores important,
+										<code>debug.keystore</code>
+										which might be already present after you have installed android studio and
+										release/upload keystore, which you will have to create when you want to publish
+										the app.
+									</li>
+									<li>
+										To get the debug SHA keys from debug.keystore
+										<br />
+										Mac:
+										<code>
+											keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore
+										</code>
+										<br />
+										Windows:
+										<code>
+											keytool -list -v -alias androiddebugkey -keystore
+											%USERPROFILE%\.android\debug.keystore
+										</code>
+									</li>
 								</ul>
+								But we also need to check if we are using debug.keystore or not.
 								<br />
-								<hr />
-							</section>
-							<section id="howToAppConstants">
-								<h4>Change app constants</h4>
-								<ol>
+								<ul>
 									<li>
-										In addition to modifying
-										<code>System Configurations</code>
-										and
-										<code>System Utilities</code>
-										, you have the option to make specific changes to certain application aspects
-										through the
-										<code>lib/utils/constants/constants.dart</code>
-										file.
-										<br />
-										<br />
-										These include altering Sound files, setting the
-										<code>initialSelectedCountryCode</code>
-										for the default country selection in the Phone login screen,
-										<br />
-										defining
-										<code>maxPhoneNumberLength</code>
-										to limit the phone number length based on your country, adjusting the wait
-										duration for opponents in battles, setting the in-between questions duration,
-										modifying the deduction for wrong answers, and configuring extra points for the
-										quickest answers, among other possibilities.
-										<img src="../images/app/changeOtherConstants.webp" />
+										go to
+										<code>android/app/build.gradle</code>
+										and scroll down to buildTypes as shown in the image.
+										<img class="img-fluid border" src="../images/app/android_build_mode.png" />
 									</li>
 									<li>
-										To modify coin distribution, access
-										<code>lib/utils/ui_utils.dart</code>
-										and update the equation according to your preferences.
-										<img src="../images/app/coinsEquation.webp" />
+										you can select which keystore to use for signing by commenting and uncommenting
+										them.
 									</li>
-								</ol>
+								</ul>
+								Select debug, while you are developing. and when you are ready to publish the app
+								you can select the release.
+								<ul>
+									<li>
+										Now, run the app in android once, after running the app, in the terminal go to
+										android folder then,
+										<br />
+										run
+										<code>./gradlew :app:signingReport</code>
+										it will output which keystore the app is signed with currently.
+									</li>
+									<li>
+										add both SHA-1 and SHA-256 keys in your firebase project. then re-download the
+										Google Services json file
+									</li>
+								</ul>
+								<h5>To Create Upload Keystore</h5>
+								To create upload keystore, using keytool use below command.
+								<li>
+									<code>
+										keytool -genkey -v -keystore upload.jks -alias key -keyalg RSA -keysize 4096
+										-storepass upload123 -keypass upload123 -validity 10000
+									</code>
+								</li>
+								<li>
+									upload.jks is file name, upload123 is password for keystore. change them
+									accordingly. Don't use the same password as here.
+								</li>
 								<br />
+								To read the keystore details
+								<ul>
+									<li>
+										<code>
+											keytool -v -list -keystore upload.jks -storepass upload123 -keypass upload123
+										</code>
+									</li>
+									<li>
+										Then sign your app with upload.jks for release build by adding it’s details in
+										<code>android/key.properties</code>
+										as shown in the image.
+										<img class="img-fluid border" src="../images/app/keystore_ properties.png" />
+									</li>
+									<li>rebuilding the app again should use your new upload keystore.</li>
+									<li>
+										Add both SHA-1 and SHA-256 keys in your firebase project. then re-download the
+										Google Services json file.
+									</li>
+								</ul>
+								<span class="badge badge-danger text-uppercase mr-2">Important</span>
+								If you are signing your app with upload keystore, make sure you have both debug and
+								upload keystore's SHA keys present in the firebase.
+								<br />
+								<br />
+								And finally after you have published your app on play console, you need to add 4
+								more SHA keys in the firebase from the play console.
+								<br />
+								to get them follow this link:
+								<a href="https://play.google.com/console/developers/app/keymanagement">
+									https://play.google.com/console/developers/app/keymanagement
+								</a>
+								<hr />
+								<h4>Data Safety Form Submission Guide for Play Console</h4>
+								<p>
+									Please watch the YouTube video below for a concise tutorial on completing the
+									mandatory Data Safety Form in Play Console.
+								</p>
+								<iframe
+									class="border rounded-lg"
+									width="560"
+									height="315"
+									src="https://www.youtube-nocookie.com/embed/nWEuWYK8Juc?si=N3c7BbeSUomZISUU&amp;controls=0"
+									title="YouTube video player"
+									frameborder="0"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									allowfullscreen></iframe>
 								<hr />
 							</section>
-							<section id="howToGenerateReleaseVersion">
-								<h4>Generate release version of this product</h4>
-								To generate the release version of this application, please refer to the
-								platform-specific guides:
-								<a href="https://flutter.dev/docs/deployment/android">Android</a>
-								<a href="https://flutter.dev/docs/deployment/ios">IOS</a>
-								.
-								<br />
-								<strong>Important:</strong>
-								Before deploying to IOS, ensure that the "China" option is unchecked as demonstrated
-								in the image below.
-								<img src="../images/app/appAvailability.webp" />
-								<br />
-								<br />
-							</section>
-							<hr />
-						</section>
-						<section id="sha-keys">
-							<h4>SHA keys and Keystore Basics</h4>
-							For Android build you need to understand few things.
-							<ul>
-								<li>
-									Basically Keystore file is used for signing your app. each keystore file having
-									SHA keys, which gets associated with your app.
-								</li>
-								<li>
-									SHA keys are required for android version of the app's login and battles
-									functionalites to work.
-								</li>
-								<li>
-									Firstly, there are 2 keystores important,
-									<code>debug.keystore</code>
-									which might be already present after you have installed android studio and
-									release/upload keystore, which you will have to create when you want to publish
-									the app.
-								</li>
-								<li>
-									To get the debug SHA keys from debug.keystore
-									<br />
-									Mac:
-									<code>
-										keytool -list -v -alias androiddebugkey -keystore ~/.android/debug.keystore
-									</code>
-									<br />
-									Windows:
-									<code>
-										keytool -list -v -alias androiddebugkey -keystore
-										%USERPROFILE%\.android\debug.keystore
-									</code>
-								</li>
-							</ul>
-							But we also need to check if we are using debug.keystore or not.
-							<br />
-							<ul>
-								<li>
-									go to
-									<code>android/app/build.gradle</code>
-									and scroll down to buildTypes as shown in the image.
-									<img class="img-fluid border" src="../images/app/android_build_mode.png" />
-								</li>
-								<li>
-									you can select which keystore to use for signing by commenting and uncommenting
-									them.
-								</li>
-							</ul>
-							Select debug, while you are developing. and when you are ready to publish the app you
-							can select the release.
-							<ul>
-								<li>
-									Now, run the app in android once, after running the app, in the terminal go to
-									android folder then,
-									<br />
-									run
-									<code>./gradlew :app:signingReport</code>
-									it will output which keystore the app is signed with currently.
-								</li>
-								<li>
-									add both SHA-1 and SHA-256 keys in your firebase project. then re-download the
-									Google Services json file
-								</li>
-							</ul>
-							<h5>To Create Upload Keystore</h5>
-							To create upload keystore, using keytool use below command.
-							<li>
-								<code>
-									keytool -genkey -v -keystore upload.jks -alias key -keyalg RSA -keysize 4096
-									-storepass upload123 -keypass upload123 -validity 10000
-								</code>
-							</li>
-							<li>
-								upload.jks is file name, upload123 is password for keystore. change them
-								accordingly. Don't use the same password as here.
-							</li>
-							<br />
-							To read the keystore details
-							<ul>
-								<li>
-									<code>
-										keytool -v -list -keystore upload.jks -storepass upload123 -keypass upload123
-									</code>
-								</li>
-								<li>
-									Then sign your app with upload.jks for release build by adding it’s details in
-									<code>android/key.properties</code>
-									as shown in the image.
-									<img class="img-fluid border" src="../images/app/keystore_ properties.png" />
-								</li>
-								<li>rebuilding the app again should use your new upload keystore.</li>
-								<li>
-									Add both SHA-1 and SHA-256 keys in your firebase project. then re-download the
-									Google Services json file.
-								</li>
-							</ul>
-							<span class="badge badge-danger text-uppercase mr-2">Important</span>
-							If you are signing your app with upload keystore, make sure you have both debug and
-							upload keystore's SHA keys present in the firebase.
-							<br />
-							<br />
-							And finally after you have published your app on play console, you need to add 4 more
-							SHA keys in the firebase from the play console.
-							<br />
-							to get them follow this link:
-							<a href="https://play.google.com/console/developers/app/keymanagement">
-								https://play.google.com/console/developers/app/keymanagement
-							</a>
-							<hr />
-							<h4>Data Safety Form Submission Guide for Play Console</h4>
-							<p>
-								Please watch the YouTube video below for a concise tutorial on completing the
-								mandatory Data Safety Form in Play Console.
-							</p>
-							<iframe
-								class="border rounded-lg"
-								width="560"
-								height="315"
-								src="https://www.youtube-nocookie.com/embed/nWEuWYK8Juc?si=N3c7BbeSUomZISUU&amp;controls=0"
-								title="YouTube video player"
-								frameborder="0"
-								allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-								allowfullscreen></iframe>
-							<hr />
-						</section>
 
-						<section id="faq">
-							<h2>FAQ</h2>
-							<div class="row">
-								<div class="col-lg-12">
-									<div class="accordion accordion-alterate arrow-right" id="faqs">
-										<div class="card">
-											<div class="card-header" id="que-1">
-												<h5 class="mb-0">
-													<a
-														href="#"
-														class="collapsed"
-														data-toggle="collapse"
-														data-target="#ans-1"
-														aria-expanded="false"
-														aria-controls="ans-1">
-														Does the app support one account per device ?
-													</a>
-												</h5>
-											</div>
-											<div id="ans-1" class="collapse" aria-labelledby="que-1" data-parent="#faqs">
-												<div class="card-body">Yes.</div>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-header" id="que-2">
-												<h5 class="mb-0">
-													<a
-														href="#"
-														class="collapsed"
-														data-toggle="collapse"
-														data-target="#ans-2"
-														aria-expanded="false"
-														aria-controls="ans-2">
-														Can App and the Web both be used with the same admin panel ?
-													</a>
-												</h5>
-											</div>
-											<div id="ans-2" class="collapse" aria-labelledby="que-2" data-parent="#faqs">
-												<div class="card-body">
-													Certainly, Elite Quiz app and Web are both Compatible with each other. So
-													you can use Same Admin Panel and Content for the App And Web. Also App
-													users can login to the Web using same account and vice versa.
+							<section id="faq">
+								<h2>FAQ</h2>
+								<div class="row">
+									<div class="col-lg-12">
+										<div class="accordion accordion-alterate arrow-right" id="faqs">
+											<div class="card">
+												<div class="card-header" id="que-1">
+													<h5 class="mb-0">
+														<a
+															href="#"
+															class="collapsed"
+															data-toggle="collapse"
+															data-target="#ans-1"
+															aria-expanded="false"
+															aria-controls="ans-1">
+															Does the app support one account per device ?
+														</a>
+													</h5>
+												</div>
+												<div
+													id="ans-1"
+													class="collapse"
+													aria-labelledby="que-1"
+													data-parent="#faqs">
+													<div class="card-body">Yes.</div>
 												</div>
 											</div>
-										</div>
-										<div class="card">
-											<div class="card-header" id="que-3">
-												<h5 class="mb-0">
-													<a
-														href="#"
-														class="collapsed"
-														data-toggle="collapse"
-														data-target="#ans-3"
-														aria-expanded="false"
-														aria-controls="ans-3">
-														Does this app support EU Data Protection Policy ?
-													</a>
-												</h5>
-											</div>
-											<div id="ans-3" class="collapse" aria-labelledby="que-3" data-parent="#faqs">
-												<div class="card-body">Yes.</div>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-header" id="que-4">
-												<h5 class="mb-0">
-													<a
-														href="#"
-														class="collapsed"
-														data-toggle="collapse"
-														data-target="#ans-4"
-														aria-expanded="false"
-														aria-controls="ans-4">
-														GDPR messages for Admob?
-													</a>
-												</h5>
-											</div>
-											<div id="ans-4" class="collapse" aria-labelledby="que-4" data-parent="#faqs">
-												<div class="card-body">Yes.</div>
-											</div>
-										</div>
-										<div class="card">
-											<div class="card-header" id="que-5">
-												<h5 class="mb-0">
-													<a
-														href="#"
-														class="collapsed"
-														data-toggle="collapse"
-														data-target="#ans-5"
-														aria-expanded="false"
-														aria-controls="ans-5">
-														Can I use Both Unity Ads and Admob Ads at the same time?
-													</a>
-												</h5>
-											</div>
-											<div id="ans-5" class="collapse" aria-labelledby="que-5" data-parent="#faqs">
-												<div class="card-body">
-													No, as of now you can only use one ad provider at a time. And you can
-													switch to one another very easily.
+											<div class="card">
+												<div class="card-header" id="que-2">
+													<h5 class="mb-0">
+														<a
+															href="#"
+															class="collapsed"
+															data-toggle="collapse"
+															data-target="#ans-2"
+															aria-expanded="false"
+															aria-controls="ans-2">
+															Can App and the Web both be used with the same admin panel ?
+														</a>
+													</h5>
+												</div>
+												<div
+													id="ans-2"
+													class="collapse"
+													aria-labelledby="que-2"
+													data-parent="#faqs">
+													<div class="card-body">
+														Certainly, Elite Quiz app and Web are both Compatible with each other.
+														So you can use Same Admin Panel and Content for the App And Web. Also
+														App users can login to the Web using same account and vice versa.
+													</div>
 												</div>
 											</div>
-										</div>
-										<div class="card">
-											<div class="card-header" id="que-6">
-												<h5 class="mb-0">
-													<a
-														href="#"
-														class="collapsed"
-														data-toggle="collapse"
-														data-target="#ans-6"
-														aria-expanded="false"
-														aria-controls="ans-6">
-														Is it possible for users to create questions ?
-													</a>
-												</h5>
-											</div>
-											<div id="ans-6" class="collapse" aria-labelledby="que-6" data-parent="#faqs">
-												<div class="card-body">
-													No, as of now there is no way for app user to create questions. Only Admin
-													Can create the questions or Admin can create new users in the admin panel
-													who only have permissions to create new questions.
+											<div class="card">
+												<div class="card-header" id="que-3">
+													<h5 class="mb-0">
+														<a
+															href="#"
+															class="collapsed"
+															data-toggle="collapse"
+															data-target="#ans-3"
+															aria-expanded="false"
+															aria-controls="ans-3">
+															Does this app support EU Data Protection Policy ?
+														</a>
+													</h5>
+												</div>
+												<div
+													id="ans-3"
+													class="collapse"
+													aria-labelledby="que-3"
+													data-parent="#faqs">
+													<div class="card-body">Yes.</div>
 												</div>
 											</div>
-										</div>
-										<div class="card">
-											<div class="card-header" id="que-7">
-												<h5 class="mb-0">
-													<a
-														href="#"
-														class="collapsed"
-														data-toggle="collapse"
-														data-target="#ans-7"
-														aria-expanded="false"
-														aria-controls="ans-7">
-														Can you provide app changelog files ?
-													</a>
-												</h5>
+											<div class="card">
+												<div class="card-header" id="que-4">
+													<h5 class="mb-0">
+														<a
+															href="#"
+															class="collapsed"
+															data-toggle="collapse"
+															data-target="#ans-4"
+															aria-expanded="false"
+															aria-controls="ans-4">
+															GDPR messages for Admob?
+														</a>
+													</h5>
+												</div>
+												<div
+													id="ans-4"
+													class="collapse"
+													aria-labelledby="que-4"
+													data-parent="#faqs">
+													<div class="card-body">Yes.</div>
+												</div>
 											</div>
-											<div id="ans-7" class="collapse" aria-labelledby="que-7" data-parent="#faqs">
-												<div class="card-body">
-													App changelog file is provided together with each update.
+											<div class="card">
+												<div class="card-header" id="que-5">
+													<h5 class="mb-0">
+														<a
+															href="#"
+															class="collapsed"
+															data-toggle="collapse"
+															data-target="#ans-5"
+															aria-expanded="false"
+															aria-controls="ans-5">
+															Can I use Both Unity Ads and Admob Ads at the same time?
+														</a>
+													</h5>
+												</div>
+												<div
+													id="ans-5"
+													class="collapse"
+													aria-labelledby="que-5"
+													data-parent="#faqs">
+													<div class="card-body">
+														No, as of now you can only use one ad provider at a time. And you can
+														switch to one another very easily.
+													</div>
+												</div>
+											</div>
+											<div class="card">
+												<div class="card-header" id="que-6">
+													<h5 class="mb-0">
+														<a
+															href="#"
+															class="collapsed"
+															data-toggle="collapse"
+															data-target="#ans-6"
+															aria-expanded="false"
+															aria-controls="ans-6">
+															Is it possible for users to create questions ?
+														</a>
+													</h5>
+												</div>
+												<div
+													id="ans-6"
+													class="collapse"
+													aria-labelledby="que-6"
+													data-parent="#faqs">
+													<div class="card-body">
+														No, as of now there is no way for app user to create questions. Only
+														Admin Can create the questions or Admin can create new users in the
+														admin panel who only have permissions to create new questions.
+													</div>
+												</div>
+											</div>
+											<div class="card">
+												<div class="card-header" id="que-7">
+													<h5 class="mb-0">
+														<a
+															href="#"
+															class="collapsed"
+															data-toggle="collapse"
+															data-target="#ans-7"
+															aria-expanded="false"
+															aria-controls="ans-7">
+															Can you provide app changelog files ?
+														</a>
+													</h5>
+												</div>
+												<div
+													id="ans-7"
+													class="collapse"
+													aria-labelledby="que-7"
+													data-parent="#faqs">
+													<div class="card-body">
+														App changelog file is provided together with each update.
+													</div>
 												</div>
 											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-							<h3>Common Issues</h3>
-							<ol>
-								<li>
-									If you are seeing warnings on admin panel after the installation, then check if
-									the warning contains
-									<code>ini_set()</code>
-									<img class="img-fluid border rounded-lg" src="../images/panel/ob_start.webp" />
-									<h5>Solution:</h5>
-									<p>
-										Then Add
-										<code>ob_start();</code>
-										in your
-										<code>index.php</code>
-										file, like shown in the image.
-									</p>
-									<p>
+								<h3>Common Issues</h3>
+								<ol>
+									<li>
+										If you are seeing warnings on admin panel after the installation, then check if
+										the warning contains
+										<code>ini_set()</code>
+										<img class="img-fluid border rounded-lg" src="../images/panel/ob_start.webp" />
+										<h5>Solution:</h5>
+										<p>
+											Then Add
+											<code>ob_start();</code>
+											in your
+											<code>index.php</code>
+											file, like shown in the image.
+										</p>
+										<p>
+											<img
+												class="img-fluid border rounded-lg"
+												src="../images/panel/ob_start-ans.png"
+												style="max-width: 50%" />
+										</p>
+									</li>
+									<li>
+										<p>
+											<strong>
+												Critical security vulnerability was discovered in reCAPTCHA Enterprise for
+												Mobile. (Not required after v2.1.5, already added)
+											</strong>
+										</p>
 										<img
 											class="img-fluid border rounded-lg"
-											src="../images/panel/ob_start-ans.png"
-											style="max-width: 50%" />
-									</p>
-								</li>
-								<li>
-									<p>
-										<strong>
-											Critical security vulnerability was discovered in reCAPTCHA Enterprise for
-											Mobile. (Not required after v2.1.5, already added)
-										</strong>
-									</p>
-									<img
-										class="img-fluid border rounded-lg"
-										src="../images/app/issue_recaptcha.webp" />
-									<p>
-										This is issue related to Firebase Auth package. which should be fixed in next
-										update of the firebase_auth (current version is 4.16.0).
-									</p>
-									<p>
-										For currently you can add the following line in
-										<code>android/app/build.gradle</code>
-										, in the dependencies section, like shown in the image
-									</p>
-									<code>implementation 'com.google.android.recaptcha:recaptcha:18.4.0'</code>
-									<img src="../images/app/solve_recaptcha.webp" />
-								</li>
-							</ol>
-							<hr />
-						</section>
+											src="../images/app/issue_recaptcha.webp" />
+										<p>
+											This is issue related to Firebase Auth package. which should be fixed in next
+											update of the firebase_auth (current version is 4.16.0).
+										</p>
+										<p>
+											For currently you can add the following line in
+											<code>android/app/build.gradle</code>
+											, in the dependencies section, like shown in the image
+										</p>
+										<code>implementation 'com.google.android.recaptcha:recaptcha:18.4.0'</code>
+										<img src="../images/app/solve_recaptcha.webp" />
+									</li>
+								</ol>
+								<hr />
+							</section>
 
-						<section id="support">
-							<h3>Contact Support</h3>
-							Delighted to serve and support you! Contact our support team led by Jay Parmar on
-							<a href="https://join.skype.com/invite/ufUntX3t1HXk">Skype</a>.
-							<br />
-							<br />
-							<strong>
-								We're available Mon-Fri, 9:00 am - 6:00 pm IST (GMT +5.30), India - Asia.
-							</strong>
-							<br />
-							<br />
-							Expect prompt responses within 24 hours via comments, forum, or email.
-							<br />
-							<br />
-							<hr />
-						</section>
+							<section id="support">
+								<h3>Contact Support</h3>
+								Delighted to serve and support you! Contact our support team led by Jay Parmar on
+								<a href="https://join.skype.com/invite/ufUntX3t1HXk">Skype</a>.
+								<br />
+								<br />
+								<strong>
+									We're available Mon-Fri, 9:00 am - 6:00 pm IST (GMT +5.30), India - Asia.
+								</strong>
+								<br />
+								<br />
+								Expect prompt responses within 24 hours via comments, forum, or email.
+								<br />
+								<br />
+								<hr />
+							</section>
 
-						<section id="rating">
-							<h3>Your Feedback</h3>
-							<p>
-								We highly appreciate your decision to choose our product. Providing top-notch
-								service is our priority, and we value your feedback.
+							<section id="rating">
+								<h3>Your Feedback</h3>
+								<p>
+									We highly appreciate your decision to choose our product. Providing top-notch
+									service is our priority, and we value your feedback.
+									<br />
+									Kindly take a moment to rate us by clicking
+									<a href="https://codecanyon.net/item/elite-quiz-the-flutter-quiz-app/33570423">
+										the link
+									</a>
+									. Your honest input helps us improve and deliver the best experience possible.
+									<br />
+								</p>
+								<h5>Your input helps us improve!</h5>
+								<p>
+									Sharing your thoughts and experiences with our app helps us identify areas for
+									improvement and ensure it meets your needs. We don't collect any personal data
+									when you provide feedback.
+								</p>
+								<p>
+									Share your suggestions and areas for improvement through a
+									<a href="https://forms.gle/ozvDBsMiyvN1asK69">google form here</a>
+								</p>
 								<br />
-								Kindly take a moment to rate us by clicking
-								<a href="https://codecanyon.net/item/elite-quiz-the-flutter-quiz-app/33570423">
-									the link
-								</a>
-								. Your honest input helps us improve and deliver the best experience possible.
-								<br />
-							</p>
-							<h5>Your input helps us improve!</h5>
-							<p>
-								Sharing your thoughts and experiences with our app helps us identify areas for
-								improvement and ensure it meets your needs. We don't collect any personal data when
-								you provide feedback.
-							</p>
-							<p>
-								Share your suggestions and areas for improvement through a
-								<a href="https://forms.gle/ozvDBsMiyvN1asK69">google form here</a>
-							</p>
-							<br />
-							<hr />
-						</section>
+								<hr />
+							</section>
 
-						<section id="contactus">
-							<h3>Reach Us</h3>
-							<p>
-								Unlock the potential of WRTeam, your go-to hub for top-notch Flutter app development
-								and web applications.
+							<section id="contactus">
+								<h3>Reach Us</h3>
+								<p>
+									Unlock the potential of WRTeam, your go-to hub for top-notch Flutter app
+									development and web applications.
+									<br />
+									Reach out to us today for quality solutions and exciting freelance opportunities.
+									<br />
+									<br />
+									Visit us at
+									<a href="https://wrteam.in/">wrteam.in</a>
+									or drop an email to
+									<a href="mailto:support+elitedoc@wrteam.in">support@wrteam.in</a>
+									.
+									<br />
+									<br />
+									Thank you for considering us!
+								</p>
+								<hr />
 								<br />
-								Reach out to us today for quality solutions and exciting freelance opportunities.
-								<br />
-								<br />
-								Visit us at
-								<a href="https://wrteam.in/">wrteam.in</a>
-								or drop an email to
-								<a href="mailto:support+elitedoc@wrteam.in">support@wrteam.in</a>
-								.
-								<br />
-								<br />
-								Thank you for considering us!
-							</p>
-							<hr />
-							<br />
+							</section>
 						</section>
 					</div>
 				</div>
