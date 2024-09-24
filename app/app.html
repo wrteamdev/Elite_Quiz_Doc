@@ -107,10 +107,15 @@
 									>
 								</li>
 								<li class="nav-item">
-									<a class="nav-link" href="#howToSetDefaultLanguage">Set App's Default Language</a>
+									<a class="nav-link" href="#howToAddLanguage"
+										>Manage App Languages (Translations) from Admin Panel
+									</a>
 								</li>
+
 								<li class="nav-item">
-									<a class="nav-link" href="#howToAddLanguage">Add New Language for App</a>
+									<a class="nav-link" href="#manageQuizLanguage"
+										>Manage Quiz Languages from Admin Panel
+									</a>
 								</li>
 								<li class="nav-item">
 									<a class="nav-link" href="#howToChangeAppColors">Change App Colors</a>
@@ -779,66 +784,38 @@ service cloud.firestore {
 									<hr />
 								</section>
 
-								<section id="howToSetDefaultLanguage">
-									<h4>Set app's default language</h4>
+								<section id="howToAddLanguage">
+									<h4>Manage System Languages (Translations) from Admin Panel</h4>
 									<ol>
 										<li>
-											The App's default language is English, but you can easily modify it. To do so,
-											navigate to the
-											<code>lib/utils/constants/constants.dart</code>
-											file and locate the section displaying the language codes, as illustrated in
-											the image below.
-											<br />
-											<p>
-												<span class="badge badge-danger text-uppercase mr-2">note</span>
-												You can obtain your desired language code from the following
-												<a href="https://developers.google.com/admin-sdk/directory/v1/languages">
-													link</a
-												>. Just ensure that the language code you select is available in the
-												aforementioned link for proper functionality.
-											</p>
-											<img src="../images/app/changeDefaultLanguage.webp" />
+											Go to system languages section and download the sample translation json file.
+											<img src="../images/panel/add_new_language.png" />
 										</li>
 										<li>
-											If your desired language code is not in supported languages list, add language
-											code in list as shown in below image.
-											<img src="../images/app/addDefaultLanguage.webp" />
-										</li>
-										<li>
-											create a
-											<code>[language-code].json</code>
-											file in
-											<code>assets/languages/</code>
-											if your desired language is not available. Copy all labels from en.json and
-											translate the values accordingly.
-											<img src="../images/app/addNewLanguage.webp" />
+											then after making changes to the translations, upload the file in the admin
+											panel. and Add Language Name and toggle RTL.
+											<img src="../images/panel/add_new_language_2.png" />
 										</li>
 									</ol>
-									<br />
 									<hr />
 								</section>
 
-								<section id="howToAddLanguage">
-									<h4>Add new app language from admin panel</h4>
+								<section id="manageQuizLanguage">
+									<h4>Manage Quiz Language from Admin Panel</h4>
+									Quiz Language meaning language of the questions, quiz content. not the
+									translations or the labels of the app. if you want to have content in the multiple
+									languages then it will be useful for you.
 									<ol>
 										<li>
-											Enable language mode in your admin panel as shown in the image below
+											If you want to have multiple languages for the quiz content, then you can
+											enable language mode in your admin panel as shown in the image below otherwise
+											keep it disabled.
 											<img src="../images/app/admin-language-1.webp" />
 										</li>
 										<li>
-											Go to languages section and select the language you want to from the drop
-											down.
-											<img src="../images/app/admin-language-2.webp" />
-										</li>
-										<li>
-											Also Add this language code in supported languages list in your app code.
-											<img src="../images/app/addDefaultLanguage.webp" />
-										</li>
-										<li>
-											create a <code>[language-code].json</code> file in
-											<code>assets/languages/</code> if your desired language is not available. Copy
-											all labels from en.json and translate the values accordingly.
-											<img src="../images/app/addNewLanguage.webp" />
+											Then you can Add/Manage quiz languages from Languages Section. or skip this
+											step if language mode is disabled.
+											<img src="../images/panel/manage_quiz_languages.png" />
 										</li>
 									</ol>
 									<hr />
