@@ -43,23 +43,9 @@
 							<a href="#introduction" class="nav-link active">Introduction</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link active" href="#admin_panel">Setup Admin Panel</a>
-							<ul class="nav flex-column">
-								<li class="nav-item">
-									<a class="nav-link" href="#installation">Configure on your server</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#customize-panel">Customize Admin Panel</a>
-								</li>
-								<li class="nav-item">
-									<a class="nav-link" href="#system-configurations">Settings For the App</a>
-								</li>
-							</ul>
-						</li>
-						<li class="nav-item">
 							<a href="#quiz_app" class="nav-link">Setup Elite Quiz App</a>
 							<ul class="nav flex-column">
-								<li class="nav-item">
+								<li class="nav-item active">
 									<a class="nav-link" href="#howToSetupFlutter">Setup Flutter</a>
 								</li>
 								<li class="nav-item">
@@ -219,152 +205,11 @@
 							<p>
 								<span class="badge badge-primary text-uppercase mr-2">new</span>
 								Share your bug reports, suggestions and areas for improvement, or engage in
-								discussion through a
-								<a href="https://github.com/wrteam-jay/Elite-Quiz-Issues-Tracker"
-									>Github Issue Tracker here</a
+								discussion through our 
+								<a href="https://elitequiz.canny.io/"
+									>feedback portal here</a
 								>
 							</p>
-							<br />
-							<hr />
-						</section>
-
-						<section id="admin_panel">
-							<h3>Setup Admin Panel</h3>
-							<section id="installation">
-								<h4>Installing Admin Panel on Shared Hosting</h4>
-								<ol>
-									<li>Create your domain or subdomain in shared hosting.</li>
-									<li>
-										Set up an empty database in your shared hosting and keep track of these
-										credentials:
-										<ol>
-											<li>Database name</li>
-											<li>Database username</li>
-											<li>Database password</li>
-										</ol>
-										<br />
-										<p>
-											<span class="badge badge-danger text-uppercase mr-2">Note</span>
-											Avoid using hyphens(-) in the <strong>Database Name</strong>, as it doesn't
-											work in some configurations.
-										</p>
-									</li>
-									<li>
-										Uploading the source code to Server
-										<ol>
-											<li>Begin by extracting the Source Code you acquired from CodeCanyon.</li>
-											<li>
-												Unpack the Admin Panel zip file and proceed to upload the PHP Code Folder's
-												contents onto your Server.
-											</li>
-										</ol>
-										<br />
-										<p>
-											<span class="badge badge-danger text-uppercase mr-2">important</span>
-											.htaccess file is essential; kindly verify its existence. If it is not
-											visible, enable the option to display hidden files.
-										</p>
-										<p>
-											<span class="badge badge-danger text-uppercase mr-2">important</span>
-											Supported PHP version should be greater than or equal to 8.1.
-										</p>
-									</li>
-									<li>
-										Now head to your project's URL (e.g., mydomain.com or subdomain.mydomain.com).
-										<br />
-										The Installation screen will then walk you through the process seamlessly.
-									</li>
-								</ol>
-								<p>Great news! You're all set to start your Elite Quiz experience.</p>
-
-								<strong>Default Login Details:</strong><br />
-								Username: admin <br />
-								Password: admin123<br />
-								<br />
-								<hr />
-							</section>
-
-							<section id="customize-panel">
-								<h4>Customize Admin Panel for your brand</h4>
-								<img
-									src="../images/panel/profile.webp"
-									alt="Customize Panel"
-									title="Customize Panel" />
-								<ul>
-									<li>Change Login Page Background Image & Bot Image from here</li>
-									<li>
-										Include a JWT Key (optional) to enhance security by generating user tokens. You
-										have the flexibility to input any passphrase or password of your choice.
-									</li>
-									<li>
-										Adjusting the <code>Theme Color</code> lets you change the main panel color to
-										suit your preferences.
-									</li>
-									<li>
-										Revise <code>Footer Copyright Text</code> to incorporate your copyright
-										information.
-									</li>
-								</ul>
-								<br />
-								<hr />
-							</section>
-
-							<section id="system-configurations">
-								<h4>Settings for the App</h4>
-								<img
-									src="../images/app/system-configurations.webp"
-									alt="System Configurations"
-									title="System Configurations" />
-								<ul>
-									<li>
-										<strong>System Timezone:</strong> This option sets the time zone of the admin
-										panel.
-									</li>
-									<li>
-										<strong>App Links:</strong> You can set your apps play store/app store links in
-										here, when user refers the app this links will be used.
-									</li>
-									<li>
-										<strong>Refer Coins:</strong> Amount of coins your referral gets for using your
-										referral code.
-									</li>
-									<li><strong>Earn Coins:</strong> Amount of coins user gets for referring.</li>
-									<li>
-										<strong>Force Update:</strong> if you want to require users to update the app to
-										latest version. you can enable force update and add the
-										<strong>Android/IOS App Version</strong> if app has given version it will show
-										force update dialog to those users.
-									</li>
-									<li>
-										<strong>True/False Values:</strong> When Creating True False Question these
-										values will be added as default values, then you can also edit them.
-									</li>
-									<li><strong>Share App Text:</strong> sharing the app will share this text.</li>
-									<li>
-										<strong>App Maintenance:</strong> When you are working on the admin panel or
-										apps Maintenance, you can enable this option so it will show users that app is
-										in Maintenance Mode.
-									</li>
-									<li>
-										<strong>Language Mode:</strong> If you want to only use one language in the app
-										you can disable this option. if you want to add multiple languages enable this
-										feature.
-									</li>
-									<li>
-										<strong>Option E:</strong> If you want 5 options for the answer you can enable
-										this option. otherwise there will be 4 options to select from for answer.
-									</li>
-									<li>
-										<strong>Daily Quiz/Contest Mode:</strong>Toggle Daily Quiz/Contest feature
-										functionality
-									</li>
-									<li>
-										<strong>In App Purchase:</strong> This option controls 'Coin Store'
-										functionality in the app. if you disable this feature user won't be able to
-										purchase coins.
-									</li>
-								</ul>
-							</section>
 							<br />
 							<hr />
 						</section>
@@ -1757,7 +1602,7 @@ service cloud.firestore {
 							<section id="support">
 								<h3>Contact Support</h3>
 								Delighted to serve and support you! Contact our support team led by Jay Parmar on
-								<a href="https://join.skype.com/invite/ufUntX3t1HXk">Skype</a>.
+								<a href="https://teams.live.com/l/invite/FEAJ7VEK0EAhWzZTQM">Microsoft Teams</a>.
 								<br />
 								<br />
 								<strong>
@@ -1791,8 +1636,11 @@ service cloud.firestore {
 									when you provide feedback.
 								</p>
 								<p>
-									Share your suggestions and areas for improvement through a
-									<a href="https://forms.gle/ozvDBsMiyvN1asK69">google form here</a>
+									Share your bug reports, suggestions and areas for improvement, or engage in
+									discussion through our 
+									<a href="https://elitequiz.canny.io/"
+										>feedback portal here</a
+									>
 								</p>
 								<br />
 								<hr />
